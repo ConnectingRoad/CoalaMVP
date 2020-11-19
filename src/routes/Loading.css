@@ -25,3 +25,25 @@
 .loading .loading__img:hover {
     bottom: 6%;
 }
+@media screen and (min-height: 700px) {
+    .loading .loading__img {
+        bottom: 15%;
+    }
+    .loading .loading__img:active {
+        bottom: 16%;
+    }
+    .loading .loading__img:hover {
+        bottom: 16%;
+    } 
+}
+@media screen and (min-height: 800px) {
+    .loading .loading__img {
+        bottom: 25%;
+    }
+    .loading .loading__img:active {
+        bottom: 26%;
+    }
+    .loading .loading__img:hover {
+        bottom: 26%;
+    } 
+}
