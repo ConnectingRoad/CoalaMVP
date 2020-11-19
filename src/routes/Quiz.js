@@ -13,7 +13,7 @@ class Quiz extends React.Component{
 
     render() {
         const { location } = this.props;
-        const { name, sex } = location.state;
+        const { name, sex } = (location.state === undefined)? { name: "", sex: "" } : location.state;
 
         if (location.state) {
             return (
