@@ -11,6 +11,6 @@ body {
 }
 @media screen and (min-width: 300px) and (max-width: 599px) {
      html { 
-         font-size: 43%; 
+         font-size: 60%; 
     } 
 }
