@@ -1,0 +1,7 @@
+.start {
+    background-image: url('../img/inro_bg.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 13% 10% 0px 10%;
+}

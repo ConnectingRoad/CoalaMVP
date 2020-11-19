@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+    <defs>
+        <filter id="txydcpf48a" width="72" height="56" x="0" y="16" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g>
+        <g filter="url(#txydcpf48a)" transform="translate(9) translate(-9)">
+            <g fill="none">
+                <path d="M27 0l27 38H0z" transform="rotate(180 31.5 30)"/>
+                <path fill="#fff" d="M27 5.18L5.812 35h42.376L27 5.18M27 0l27 38H0L27 0z" transform="rotate(180 31.5 30)"/>
+            </g>
+        </g>
+        <text fill="#fff" font-family="NotoSansCJKkr-Medium, Noto Sans CJK KR" font-size="16px" font-weight="500" transform="translate(9) translate(27 19)">
+            <tspan x="-14.72" y="0">시작</tspan>
+        </text>
+    </g>
+</svg>

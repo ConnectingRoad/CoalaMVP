@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="399" height="439" viewBox="0 0 399 439">
+    <defs>
+        <filter id="sk3mjpemta" width="399" height="439" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-color="#6b576f" flood-opacity=".8"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g filter="url(#sk3mjpemta)">
+        <path fill="#fff" stroke="rgba(200,170,194,0.7)" d="M354.844 71.169H261.79a71.793 71.793 0 0 0-143.581 0H25.157A25.121 25.121 0 0 0 0 96.253v298.662A25.121 25.121 0 0 0 25.157 420h329.687A25.121 25.121 0 0 0 380 394.915V96.253a25.121 25.121 0 0 0-25.156-25.084" transform="translate(9.5 6.5)"/>
+    </g>
+</svg>
