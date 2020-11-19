@@ -1,6 +1,7 @@
 .start {
     background-image: url('../img/inro_bg.png');
     background-repeat: no-repeat;
+    background-size: cover;
     box-sizing: border-box;
     margin: 0;
     height: 100vh;
