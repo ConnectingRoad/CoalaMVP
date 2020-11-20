@@ -1,6 +1,8 @@
 import React from 'react';
 import './Quiz.css';
 import { Link } from 'react-router-dom';
+import intro_bg from '../img/intro_bg.png';
+import QuizCard from '../components/QuizCard';
 
 class Quiz extends React.Component{
     componentDidMount() {
@@ -18,7 +20,8 @@ class Quiz extends React.Component{
         if (location.state) {
             return (
                 <div className="quiz">
-                    {name}{sex}
+                    <img className="quiz__bg" alt="quiz_bg" src={intro_bg}/>
+                    <QuizCard />
                 </div>
             );
         } else {

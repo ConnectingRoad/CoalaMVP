@@ -1,0 +1,33 @@
+.quiz__card {
+    background: #ffffff50;
+    border: none;
+    border-radius: 38px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: 3px 3px 8px 0 rgba(128, 88, 82, 0.8);
+}
+
+.quiz__card .quiz__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    width: 28%;
+}
+.quiz .quiz__text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    white-space: nowrap;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #000000;
+    text-align: center;
+}
