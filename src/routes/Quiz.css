@@ -1,0 +1,11 @@
+.quiz {
+    background: url('../img/intro_bg.png') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+    padding: 13% 10% 0px 10%;
+}

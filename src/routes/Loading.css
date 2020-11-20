@@ -1,11 +1,18 @@
 .loading {
+    background: linear-gradient(to bottom, #683B73CC, #B45A86CC, #D26A75CC);
     position: relative;
-    background-image: url('../img/inro_bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
     box-sizing: border-box;
-    padding: 13% 10% 0px 10%; 
+    margin: 0;
+    height: 100vh;
+    padding: 13% 10% 0px 10%;
+    z-index: 0;
+}
+.loading .loading__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }
 .loading .loading__text {
     font-size: 1.8rem;

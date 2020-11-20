@@ -1,6 +1,7 @@
 import React from 'react';
 import './Loading.css';
 import start_btn from '../img/start_btn.svg';
+import intro_bg from '../img/intro_bg.png';
 import { Link } from 'react-router-dom';
 
 class Loading extends React.Component{
@@ -19,6 +20,7 @@ class Loading extends React.Component{
         if (location.state) {
             return (
                 <div className="loading">
+                    <img className="loading__bg" alt="intro_bg" src={intro_bg}/>
                     <div className="loading__text">
                         <p>평화로운 코알라 마을<br/>
                         모든 코알라들은 여유롭게 자고 먹으며<br/> 
