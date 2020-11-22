@@ -1,6 +1,6 @@
 import React from 'react';
 import './Info.css';
-import naming_bg from '../img/naming_bg.svg';
+import naming_bg from '../img/naming_bg.png';
 import naming_img from '../img/naming_img.png';
 import { Link } from 'react-router-dom';
 

@@ -30,9 +30,13 @@
 }
 .loading .loading__img:active {
     bottom: 6%;
+    outline: none;
+    -webkit-tap-highlight-color : transparent;
 }
 .loading .loading__img:hover {
     bottom: 6%;
+    outline: none;
+    -webkit-tap-highlight-color : transparent;
 }
 @media screen and (min-height: 700px) {
     .loading .loading__img {

@@ -5,10 +5,11 @@ import village_road from '../img/village_road.png'
 
 var bg_images = ["df", "dsf"];
 var images = [village_road, village_road];
-var texts = ["두 갈래 길에 들어선 코알라 이정표가 없다! 이때 당신의 선택은?",
+var texts = ["두 갈래 길에 들어선 코알라\n이정표가 없다! 이때 당신의 선택은?",
             " dsfds"];
 var answers1 = ["df", "DSfd"];
 var answers2 = ["sdf", "dsfds"];
+var progress_images = ["sdfsdf"];
 
 class QuizCard extends React.Component {
     id = 0
@@ -18,7 +19,8 @@ class QuizCard extends React.Component {
         text: texts[0],
         answer1: answers1[0],
         answer2: answers2[0],
-        answer3: "sdf",
+        answer3_visiblility: "gone",
+        progress_image: progress_images[0],
         answers: [],
     }
 
@@ -26,7 +28,8 @@ class QuizCard extends React.Component {
         if (this.id !== 8) {
             e.preventDefault();
             const newAnswers = this.state.answers;
-            newAnswers.push(1);
+            newAnswers.push(e.target.id);
+            console.log(e.target.id);
             this.id++;
             this.setState({
                 bg_image: bg_images[this.id],
@@ -51,7 +54,11 @@ class QuizCard extends React.Component {
                 <Link className="quiz__answer1" to={{
                         pathname: '/loading',
                         state: {  }
-                }} onClick={this.handleClick}><p>{ answer1 }</p></Link> 
+                }} onClick={this.handleClick}><p id="1">{ answer1 }</p></Link>
+                <Link className="quiz__answer2" to={{
+                        pathname: '/loading',
+                        state: {  }
+                }} onClick={this.handleClick}><p id="2">{ answer2 }</p></Link> 
             </div>
         )
     }
