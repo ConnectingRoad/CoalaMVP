@@ -18,14 +18,9 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: block;
     white-space: nowrap;
     font-size: 1.8rem;
     font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.33;
-    letter-spacing: normal;
     color: #000000;
 }
 .info .info__name {
