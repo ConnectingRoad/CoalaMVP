@@ -76,6 +76,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.quiz .quiz__answer3 {
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: collapse;
+}
 .quiz__answer1 p, .quiz__answer2 p, .quiz__answer3 p {
     position: absolute;
     width: 100%;
@@ -83,4 +90,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: pre-wrap;
+}
+.quiz .quiz__progress {
+    width: 100%;
 }
