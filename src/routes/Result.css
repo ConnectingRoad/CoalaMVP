@@ -1,0 +1,16 @@
+.result {
+    background: linear-gradient(to bottom, #683B73CC, #B45A86CC, #D26A75CC);
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+}
+.result .result__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}

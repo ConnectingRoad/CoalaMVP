@@ -88,6 +88,9 @@ class QuizCard extends React.Component {
                 button_color: button_colors[this.id],
                 answers: newAnswers,
             })
+        } else {
+            let newAnswers = this.state.answers;
+            newAnswers.push(e.target.id);
         }
     }
 
