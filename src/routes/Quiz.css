@@ -29,14 +29,14 @@
 
 .quiz__card .quiz__img {
     position: absolute;
-    top: 20%;
+    top: 18%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40%;
 }
 .quiz__card .quiz__text {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: pre-wrap;
@@ -47,7 +47,7 @@
     text-align: center;
 }
 .quiz__card .quiz__answer1, .quiz__answer2, .quiz__answer3 {
-    border-radius: 38px;
+    border-radius: 20px;
     width: 76%;
     height: 11%;
     background-color: #59375d;
@@ -66,19 +66,19 @@
 }
 .quiz .quiz__answer1 {
     position: absolute;
-    top: 73%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .quiz .quiz__answer2 {
     position: absolute;
-    top: 89%;
+    top: 74%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .quiz .quiz__answer3 {
     position: absolute;
-    top: 89%;
+    top: 88%;
     left: 50%;
     transform: translate(-50%, -50%);
     visibility: collapse;

@@ -57,6 +57,7 @@ class QuizCard extends React.Component {
         answer1: answers1[0],
         answer2: answers2[0],
         answer3_visibility: "collapse",
+        answers_height: "11%",
         progress_image: progress_images[0],
         button_color: button_colors[0],
         answers: [],
@@ -84,6 +85,7 @@ class QuizCard extends React.Component {
                 answer1: answers1[this.id],
                 answer2: answers2[this.id],
                 answer3_visibility: this.id === 6? "visible" : "collapse",
+                answers_height: this.id === 6? "9%" : "11%",
                 progress_image: progress_images[this.id],
                 button_color: button_colors[this.id],
                 answers: newAnswers,
@@ -97,7 +99,7 @@ class QuizCard extends React.Component {
     render() {
         const { location } = this.props;
         const { name, sex } = (location.state === undefined)? { name: "", sex: "" } : location.state;
-        let { bg_gradation, bg_image, image, text, answer1, answer2, answer3_visibility, 
+        let { bg_gradation, bg_image, image, text, answer1, answer2, answer3_visibility, answers_height,
             progress_image, button_color, answers } = this.state;
 
         if (location.state) {
@@ -113,14 +115,14 @@ class QuizCard extends React.Component {
                                 pathname: '/result',
                                 state: { name, sex, answers }
                         }} onClick={this.handleClick}
-                        style={ {backgroundColor: button_color} }><p id="1">{ answer1 }</p></Link>
+                        style={ {backgroundColor: button_color, height: answers_height} }><p id="1">{ answer1 }</p></Link>
                         <Link className="quiz__answer2" id="2" to={{
                                 pathname: '/result',
                                 state: { name, sex, answers }
                         }} onClick={this.handleClick}
-                        style={ {backgroundColor: button_color} }><p id="2">{ answer2 }</p></Link>
+                        style={ {backgroundColor: button_color, height: answers_height} }><p id="2">{ answer2 }</p></Link>
                         <Link className="quiz__answer3" onClick={this.handleClick}
-                        style={ {backgroundColor: button_color, visibility: answer3_visibility} }><p id="3">펭귄어 배우기</p></Link>
+                        style={ {backgroundColor: button_color, visibility: answer3_visibility, height: answers_height} }><p id="3">펭귄어 배우기</p></Link>
                     </div>
                     <img className="quiz__progress" alt="quiz_progress" src={progress_image}/>
                 </div>
