@@ -2,7 +2,8 @@ import React from 'react';
 import './Quiz.css';
 import { Link } from 'react-router-dom';
 import village_road from '../img/village_road.png';
-import village_bg from '../img/village_bg.png';
+import village_bottom from '../img/village_bottom.png';
+import village_top from '../img/village_top.png';
 import bar_1 from '../img/bar_1.png';
 import sea_bg from '../img/sea_bg.png';
 import sea_surfing from '../img/sea_surfing.png';
@@ -19,12 +20,13 @@ import bar_4 from '../img/bar_4.png';
 var bg_gradations = ["linear-gradient(to bottom, #D88089CC, #FFC586CC)", 
 "linear-gradient(to bottom, #3B5295CC, #B0D8D9CC)", 
 "linear-gradient(to bottom, #3B5295CC, #B0D8D9CC)",
-"linear-gradient(to bottom, #4FA6B1CC, #ECE3C0CC, #FFD996CC)", 
-"linear-gradient(to bottom, #4FA6B1CC, #ECE3C0CC, #FFD996CC)",
+"linear-gradient(to bottom, #4FA6B1CC, #ECE3C0CC)", 
+"linear-gradient(to bottom, #4FA6B1CC, #ECE3C0CC)",
 "linear-gradient(to bottom, #25002ACC, #3A136ACC, #76A5FFCC)",
 "linear-gradient(to bottom, #7285C2CC, #A6C0DFCC, #C1D2E8CC)",
 "linear-gradient(to bottom, #7285C2CC, #A6C0DFCC, #C1D2E8CC)"];
-var bg_images = [village_bg, sea_bg, sea_bg, sea_bg, sea_bg, sea_bg, sea_bg, sea_bg];
+var bg_top_images = [village_top, village_top, village_top, village_top, village_top, village_top, village_top, village_top];
+var bg_bottom_images = [village_bottom, village_bottom, village_bottom, village_bottom, village_bottom, village_bottom, village_bottom, village_bottom];
 var images = [village_road, sea_surfing, sea_turtle, desert_tear, desert_activity, desert_sand, polar_juggling, polar_clock];
 var texts = ["두 갈래 길에 들어선 코알라\n이정표가 없다! 이때 당신의 선택은?",
 "바다에 도착했다\n함께 서핑하러 가자고 제안하는 거북이\n이때 당신의 반응은?",
@@ -51,7 +53,8 @@ class QuizCard extends React.Component {
     id = 0
     state = {
         bg_gradation: bg_gradations[0],
-        bg_image: bg_images[0],
+        bg_top_image: bg_top_images[0],
+        bg_bottom_image: bg_bottom_images[0],
         image: images[0],
         text: texts[0],
         answer1: answers1[0],
@@ -79,7 +82,8 @@ class QuizCard extends React.Component {
             this.id++;
             this.setState({
                 bg_gradation: bg_gradations[this.id],
-                bg_image: bg_images[this.id],
+                bg_top_image: bg_top_images[this.id],
+                bg_botton_image: bg_bottom_images[this.id],
                 image: images[this.id],
                 text: texts[this.id],
                 answer1: answers1[this.id],
@@ -99,13 +103,14 @@ class QuizCard extends React.Component {
     render() {
         const { location } = this.props;
         const { name, sex } = (location.state === undefined)? { name: "", sex: "" } : location.state;
-        let { bg_gradation, bg_image, image, text, answer1, answer2, answer3_visibility, answers_height,
+        let { bg_gradation, bg_top_image, bg_bottom_image, image, text, answer1, answer2, answer3_visibility, answers_height,
             progress_image, button_color, answers } = this.state;
 
         if (location.state) {
             return (
                 <div className="quiz" style={ {background: bg_gradation} }>
-                    <img className="quiz__bg" alt="quiz_bg" src={bg_image}/>
+                    <img className="quiz__bg" id="top" alt="quiz_bg_top" src={bg_top_image}/>
+                    <img className="quiz__bg" id="bottom" alt="quiz_bg_bottom" src={bg_bottom_image}/>
                     <div className="quiz__card">
                         <img className="quiz__img" alt="quiz_img" src={ image }/>
                         <div className="quiz__text">

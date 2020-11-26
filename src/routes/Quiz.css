@@ -13,7 +13,7 @@
     border-radius: 38px;
     width: 80%;
     height: 0;
-    padding-bottom: 95%;
+    padding-bottom: 120%;
     margin: 13% 10% 0px 10%;
     box-shadow: 3px 3px 8px 0 rgba(128, 88, 82, 0.8);
     position: relative;
@@ -21,10 +21,17 @@
 
 .quiz .quiz__bg {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: -1;
+}
+
+.quiz #top {
+    top: 0;
+    left: 0;
+}
+.quiz #bottom {
+    bottom: 0;
+    left: 0;
 }
 
 .quiz__card .quiz__img {
@@ -47,7 +54,7 @@
     text-align: center;
 }
 .quiz__card .quiz__answer1, .quiz__answer2, .quiz__answer3 {
-    border-radius: 20px;
+    border-radius: 38px;
     width: 76%;
     height: 11%;
     background-color: #59375d;
@@ -93,4 +100,11 @@
 }
 .quiz .quiz__progress {
     width: 100%;
+}
+
+@media screen and (max-height: 750px) {
+    .quiz .quiz__card {
+        padding-bottom: 95%;
+        margin: 10% 10% 0px 10%;
+    }
 }
