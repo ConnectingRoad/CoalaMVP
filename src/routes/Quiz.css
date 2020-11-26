@@ -59,7 +59,7 @@
     height: 11%;
     background-color: #59375d;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.4rem;
     text-decoration: unset;
     text-align: center;
@@ -93,12 +93,14 @@
 .quiz__answer1 p, .quiz__answer2 p, .quiz__answer3 p {
     position: absolute;
     width: 100%;
-    top: 22%;
+    top: 27%;
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: pre-wrap;
 }
 .quiz .quiz__progress {
+    position: absolute;
+    bottom: 0;
     width: 100%;
 }
 

@@ -5,15 +5,22 @@ import village_road from '../img/village_road.png';
 import village_bottom from '../img/village_bottom.png';
 import village_top from '../img/village_top.png';
 import bar_1 from '../img/bar_1.png';
-import sea_bg from '../img/sea_bg.png';
+import sea_bottom from '../img/sea_bottom.png';
+import sea_top from '../img/sea_top.png';
 import sea_surfing from '../img/sea_surfing.png';
 import bar_2 from '../img/bar_2.png';
 import sea_turtle from '../img/sea_turtle.png';
 import desert_tear from '../img/desert_tear.png';
+import desert_bottom from '../img/desert_bottom.png';
+import desert_top from '../img/desert_top.png';
 import bar_3 from '../img/bar_3.png';
 import desert_activity from '../img/desert_activity.png';
 import desert_sand from '../img/desert_sand.png';
+import desert_dark_bottom from '../img/desertdark_bottom.png';
+import desert_dark_top from '../img/desertdark_top.png';
 import polar_juggling from '../img/polar_juggling.png';
+import polar_bottom from '../img/polar_bottom.png';
+import polar_top from '../img/polar_top.png';
 import polar_clock from '../img/polar_clock.png';
 import bar_4 from '../img/bar_4.png';
 
@@ -25,8 +32,8 @@ var bg_gradations = ["linear-gradient(to bottom, #D88089CC, #FFC586CC)",
 "linear-gradient(to bottom, #25002ACC, #3A136ACC, #76A5FFCC)",
 "linear-gradient(to bottom, #7285C2CC, #A6C0DFCC, #C1D2E8CC)",
 "linear-gradient(to bottom, #7285C2CC, #A6C0DFCC, #C1D2E8CC)"];
-var bg_top_images = [village_top, village_top, village_top, village_top, village_top, village_top, village_top, village_top];
-var bg_bottom_images = [village_bottom, village_bottom, village_bottom, village_bottom, village_bottom, village_bottom, village_bottom, village_bottom];
+var bg_top_images = [village_top, sea_top, sea_top, desert_top, desert_top, desert_dark_top, polar_top, polar_top];
+var bg_bottom_images = [village_bottom, sea_bottom, sea_bottom, desert_bottom, desert_bottom, desert_dark_bottom, polar_bottom, polar_bottom];
 var images = [village_road, sea_surfing, sea_turtle, desert_tear, desert_activity, desert_sand, polar_juggling, polar_clock];
 var texts = ["두 갈래 길에 들어선 코알라\n이정표가 없다! 이때 당신의 선택은?",
 "바다에 도착했다\n함께 서핑하러 가자고 제안하는 거북이\n이때 당신의 반응은?",
@@ -83,7 +90,7 @@ class QuizCard extends React.Component {
             this.setState({
                 bg_gradation: bg_gradations[this.id],
                 bg_top_image: bg_top_images[this.id],
-                bg_botton_image: bg_bottom_images[this.id],
+                bg_bottom_image: bg_bottom_images[this.id],
                 image: images[this.id],
                 text: texts[this.id],
                 answer1: answers1[this.id],

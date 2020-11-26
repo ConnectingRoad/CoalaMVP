@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 html {
     font-size: 62.5%;
@@ -8,7 +8,7 @@ body {
     padding: 0;
     width: 100%;
     max-width: 500px;
-    font-family: 'NotoSans KR';
+    font-family: "Noto Sans KR", sans-serif;
 }
 @media screen and (min-width: 320px) and (max-width: 599px) {
      html { 
