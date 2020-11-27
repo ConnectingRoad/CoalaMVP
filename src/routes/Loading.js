@@ -1,7 +1,7 @@
 import React from 'react';
 import './Loading.css';
 import start_btn from '../img/start_btn.svg';
-import intro_bg from '../img/intro_bg.svg';
+import intro_bg from '../img/intro_bg.png';
 import { Link } from 'react-router-dom';
 
 class Loading extends React.Component{

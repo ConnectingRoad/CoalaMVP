@@ -3,24 +3,24 @@ import './Quiz.css';
 import { Link } from 'react-router-dom';
 import village_road from '../img/village_road.svg';
 import village_bottom from '../img/village_bottom.svg';
-import village_top from '../img/village_top.svg';
+import village_top from '../img/village_top.png';
 import bar_1 from '../img/bar_1.svg';
 import sea_bottom from '../img/sea_bottom.svg';
-import sea_top from '../img/sea_top.svg';
+import sea_top from '../img/sea_top.png';
 import sea_surfing from '../img/sea_surfing.png';
 import bar_2 from '../img/bar_2.svg';
 import sea_turtle from '../img/sea_turtle.svg';
 import desert_tear from '../img/desert_tear.svg';
 import desert_bottom from '../img/desert_bottom.svg';
-import desert_top from '../img/desert_top.svg';
+import desert_top from '../img/desert_top.png';
 import bar_3 from '../img/bar_3.svg';
 import desert_activity from '../img/desert_activity.svg';
 import desert_sand from '../img/desert_sand.svg';
 import desert_dark_bottom from '../img/desertdark_bottom.svg';
-import desert_dark_top from '../img/desertdark_top.svg';
+import desert_dark_top from '../img/desertdark_top.png';
 import polar_juggling from '../img/polar_juggling.svg';
 import polar_bottom from '../img/polar_bottom.svg';
-import polar_top from '../img/polar_top.svg';
+import polar_top from '../img/polar_top.png';
 import polar_clock from '../img/polar_clock.png';
 import bar_4 from '../img/bar_4.svg';
 
@@ -45,13 +45,13 @@ var texts = ["두 갈래 길에 들어선 코알라\n이정표가 없다! 이때
 "어느새 저녁이 되었다\n펭귄들이 재밌었다며 더 놀자고\n제안하는데 이때 당신의 반응은?"];
 var answers1 = ["동물들이 어떤 길로 많이 갔는지\n그 흔적들을 찾아본다",
 "그래! 나도 같이 탈래!", "재미 없지만 코알라 마을에 가서\n돈을 벌 수 있는 기술",
-"무슨 일이야? 왜 싸웠는데?", "남들이 많이 하지 않지만\n특이한 코브라 길들이기",
-"혹시 모르니 사막 여우가\n알려준 방법 그대로 굴을 판다", "썰매타기",
+"무슨 일이야? 왜 싸웠는데?", "나만의 특별한 경험!\n사막 오지 탐험",
+"혹시 모르니 사막 여우가\n알려준 방법 그대로 굴을 판다", "썰매 타기",
 "아 진짜 재밌었다! 그래 더 놀자!"];
 var answers2 = ["'왠지 이쪽 길이 맞을 것 같아'\n감으로 찍어서 간다",
 "아니야~ 난 앉아서 햇볕 쐬고 있을게~\n조용히 선글라스를 낀다",
 "돈을 벌 수는 없지만\n흥미로운 기술", "헐ㅜㅜ 괜찮아? 너무 속상하겠다...",
-"가장 인기 있는 열기구 타기 체험", "사막 여우의 방법에\n나만의 느낌을 추가해서 굴을 판다",
+"여행의 하이라이트!\n 열기구 타기", "사막 여우의 방법에\n나만의 느낌을 추가해서 굴을 판다",
 "눈사람 만들기", "시간이 늦어서\n이제 좀 쉬러갈게, 안녕~"];
 var progress_images = [bar_1, bar_2, bar_2, bar_3, bar_3, bar_3, bar_4, bar_4];
 var button_colors = ["#E6596A", "#7388C2", "#7388C2", "#60A6AF", "#60A6AF", "#59375D", "#7A83E0", "#7A83E0"];
