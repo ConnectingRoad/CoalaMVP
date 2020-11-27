@@ -1,6 +1,6 @@
 import Info from '../components/Info';
 import './Start.css';
-import intro_bg from '../img/intro_bg.png';
+import intro_bg from '../img/intro_bg.svg';
 
 function Start() {
     return (

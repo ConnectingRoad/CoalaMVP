@@ -1,6 +1,6 @@
 import React from 'react';
 import './Result.css';
-import intro_bg from '../img/intro_bg.png';
+import intro_bg from '../img/intro_bg.svg';
 
 class Result extends React.Component{
     componentDidMount() {

@@ -101,7 +101,7 @@
     display: table-cell;
     vertical-align: middle;
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 500px) {
     .quiz .quiz__card {
         padding-bottom: 95%;
         margin: 10% 10% 0px 10%;

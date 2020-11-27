@@ -1,35 +1,35 @@
 import React from 'react';
 import './Quiz.css';
 import { Link } from 'react-router-dom';
-import village_road from '../img/village_road.png';
-import village_bottom from '../img/village_bottom.png';
-import village_top from '../img/village_top.png';
-import bar_1 from '../img/bar_1.png';
-import sea_bottom from '../img/sea_bottom.png';
-import sea_top from '../img/sea_top.png';
+import village_road from '../img/village_road.svg';
+import village_bottom from '../img/village_bottom.svg';
+import village_top from '../img/village_top.svg';
+import bar_1 from '../img/bar_1.svg';
+import sea_bottom from '../img/sea_bottom.svg';
+import sea_top from '../img/sea_top.svg';
 import sea_surfing from '../img/sea_surfing.png';
-import bar_2 from '../img/bar_2.png';
-import sea_turtle from '../img/sea_turtle.png';
-import desert_tear from '../img/desert_tear.png';
-import desert_bottom from '../img/desert_bottom.png';
-import desert_top from '../img/desert_top.png';
-import bar_3 from '../img/bar_3.png';
-import desert_activity from '../img/desert_activity.png';
-import desert_sand from '../img/desert_sand.png';
-import desert_dark_bottom from '../img/desertdark_bottom.png';
-import desert_dark_top from '../img/desertdark_top.png';
-import polar_juggling from '../img/polar_juggling.png';
-import polar_bottom from '../img/polar_bottom.png';
-import polar_top from '../img/polar_top.png';
+import bar_2 from '../img/bar_2.svg';
+import sea_turtle from '../img/sea_turtle.svg';
+import desert_tear from '../img/desert_tear.svg';
+import desert_bottom from '../img/desert_bottom.svg';
+import desert_top from '../img/desert_top.svg';
+import bar_3 from '../img/bar_3.svg';
+import desert_activity from '../img/desert_activity.svg';
+import desert_sand from '../img/desert_sand.svg';
+import desert_dark_bottom from '../img/desertdark_bottom.svg';
+import desert_dark_top from '../img/desertdark_top.svg';
+import polar_juggling from '../img/polar_juggling.svg';
+import polar_bottom from '../img/polar_bottom.svg';
+import polar_top from '../img/polar_top.svg';
 import polar_clock from '../img/polar_clock.png';
-import bar_4 from '../img/bar_4.png';
+import bar_4 from '../img/bar_4.svg';
 
 var bg_gradations = ["linear-gradient(to bottom, #D88089CC, #FFC586CC)", 
 "linear-gradient(to bottom, #3B5295CC, #B0D8D9CC)", 
 "linear-gradient(to bottom, #3B5295CC, #B0D8D9CC)",
 "linear-gradient(to bottom, #4FA6B1CC, #ECE3C0CC)", 
 "linear-gradient(to bottom, #4FA6B1CC, #ECE3C0CC)",
-"linear-gradient(to bottom, #25002ACC, #3A136ACC, #76A5FFCC)",
+"linear-gradient(to bottom, #25002AAA, #3A136AAA, #76A5FFAA)",
 "linear-gradient(to bottom, #7285C2CC, #A6C0DFCC, #C1D2E8CC)",
 "linear-gradient(to bottom, #7285C2CC, #A6C0DFCC, #C1D2E8CC)"];
 var bg_top_images = [village_top, sea_top, sea_top, desert_top, desert_top, desert_dark_top, polar_top, polar_top];
@@ -96,7 +96,6 @@ class QuizCard extends React.Component {
                 answer1: answers1[this.id],
                 answer2: answers2[this.id],
                 answer3_visibility: this.id === 6? "visible" : "collapse",
-                // answers_height: this.id === 6? "9%" : "11%",
                 progress_image: progress_images[this.id],
                 button_color: button_colors[this.id],
                 answers: newAnswers,
