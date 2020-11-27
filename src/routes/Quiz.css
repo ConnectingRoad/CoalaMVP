@@ -56,7 +56,7 @@
 .quiz__card .quiz__answer1, .quiz__answer2, .quiz__answer3 {
     border-radius: 38px;
     width: 76%;
-    height: 11%;
+    height: auto;
     background-color: #59375d;
     color: white;
     font-weight: 500;
@@ -65,6 +65,8 @@
     text-align: center;
     box-shadow: 2px 2px 6px 0 rgba(128, 88, 82, 0.8);
     box-sizing: border-box;
+    white-space: pre-wrap;
+    display: table;
 }
 .quiz__card .quiz__answer1:active, .quiz__answer2:active, .quiz__answer3:active {
     box-shadow: inset 0 0 3px rgba(128, 88, 82, 0.8);
@@ -90,23 +92,21 @@
     transform: translate(-50%, -50%);
     visibility: collapse;
 }
-.quiz__answer1 p, .quiz__answer2 p, .quiz__answer3 p {
-    position: absolute;
-    width: 100%;
-    top: 27%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: pre-wrap;
-}
 .quiz .quiz__progress {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
-
-@media screen and (max-height: 750px) {
+.quiz__answer1 div, .quiz__answer2 div, .quiz__answer3 div {
+    display: table-cell;
+    vertical-align: middle;
+}
+@media screen and (min-width: 550px) {
     .quiz .quiz__card {
         padding-bottom: 95%;
         margin: 10% 10% 0px 10%;
+    }
+    .quiz .quiz__progress {
+        width: 500px;
     }
 }

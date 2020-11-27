@@ -96,7 +96,7 @@ class QuizCard extends React.Component {
                 answer1: answers1[this.id],
                 answer2: answers2[this.id],
                 answer3_visibility: this.id === 6? "visible" : "collapse",
-                answers_height: this.id === 6? "9%" : "11%",
+                // answers_height: this.id === 6? "9%" : "11%",
                 progress_image: progress_images[this.id],
                 button_color: button_colors[this.id],
                 answers: newAnswers,
@@ -127,14 +127,14 @@ class QuizCard extends React.Component {
                                 pathname: '/result',
                                 state: { name, sex, answers }
                         }} onClick={this.handleClick}
-                        style={ {backgroundColor: button_color, height: answers_height} }><p id="1">{ answer1 }</p></Link>
+                        style={ {backgroundColor: button_color, height: answers_height} }><div id="1">{ answer1 }</div></Link>
                         <Link className="quiz__answer2" id="2" to={{
                                 pathname: '/result',
                                 state: { name, sex, answers }
                         }} onClick={this.handleClick}
-                        style={ {backgroundColor: button_color, height: answers_height} }><p id="2">{ answer2 }</p></Link>
+                        style={ {backgroundColor: button_color, height: answers_height} }><div id="2">{ answer2 }</div></Link>
                         <Link className="quiz__answer3" onClick={this.handleClick}
-                        style={ {backgroundColor: button_color, visibility: answer3_visibility, height: answers_height} }><p id="3">펭귄어 배우기</p></Link>
+                        style={ {backgroundColor: button_color, visibility: answer3_visibility, height: answers_height} }><div id="3">펭귄어 배우기</div></Link>
                     </div>
                     <img className="quiz__progress" alt="quiz_progress" src={progress_image}/>
                 </div>
