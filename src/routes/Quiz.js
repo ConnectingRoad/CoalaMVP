@@ -84,9 +84,13 @@ class QuizCard extends React.Component {
     handleClick = (e) => {
         if (this.id !== 7) {
             e.preventDefault();
+            
             let newAnswers = this.state.answers;
             if (this.id !== 4 && this.id !== 5) newAnswers.push(e.target.id);
+            else newAnswers.push("0");
+
             this.id++;
+
             this.setState({
                 bg_gradation: bg_gradations[this.id],
                 bg_top_image: bg_top_images[this.id],
@@ -133,7 +137,8 @@ class QuizCard extends React.Component {
                         }} onClick={this.handleClick}
                         style={ {backgroundColor: button_color, height: answers_height} }><div id="2">{ answer2 }</div></Link>
                         <Link className="quiz__answer3" onClick={this.handleClick}
-                        style={ {backgroundColor: button_color, visibility: answer3_visibility, height: answers_height} }><div id="3">펭귄어 배우기</div></Link>
+                        style={ {backgroundColor: button_color, visibility: answer3_visibility, height: answers_height} }
+                        to="/"><div id="3">펭귄어 배우기</div></Link>
                     </div>
                     <img className="quiz__progress" alt="quiz_progress" src={progress_image}/>
                 </div>
