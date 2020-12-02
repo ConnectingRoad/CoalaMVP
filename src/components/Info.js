@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 class Info extends React.Component {
     state = {
         name: "",
-        border: "solid #59375D",
+        border: "0.18em solid #ffffff",
         placeholder: "",
     }
 
@@ -21,7 +21,7 @@ class Info extends React.Component {
         if (!this.state.name.trim()) {
             e.preventDefault();
             this.setState({
-                border: "solid #DD283C",
+                border: "0.18em solid rgb(221, 40, 60, 0.8)",
                 placeholder: "이름을 입력해주세요"
             })
         }
@@ -36,7 +36,7 @@ class Info extends React.Component {
                 <img className="info__img" alt="naming_img" src={ naming_img }/>
                 <div className="info__text">당신의 코알라에게 이름을 지어주세요</div>
                 <input className="info__name" onChange={this.handleChange} 
-                    style={ {border: this.state.border} } placeholder={this.state.placeholder}/>
+                    style={ {border: this.state.border} } placeholder={this.state.placeholder}/> 
                 <Link className="info__male" to={{
                     pathname: '/loading',
                     state: { name, sex: "남" }
