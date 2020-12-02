@@ -10,23 +10,19 @@ import sea_top from '../img/sea_top.png';
 import sea_surfing from '../img/sea_surfing.png';
 import bar_2 from '../img/bar_2.svg';
 import sea_turtle from '../img/sea_turtle.svg';
-import bar_3 from '../img/bar_3.svg';
 import desert_tear from '../img/desert_tear.svg';
 import desert_bottom from '../img/desert_bottom.svg';
 import desert_top from '../img/desert_top.png';
-import bar_4 from '../img/bar_4.svg';
+import bar_3 from '../img/bar_3.svg';
 import desert_activity from '../img/desert_activity.svg';
-import bar_5 from '../img/bar_5.svg';
 import desert_sand from '../img/desert_sand.svg';
-import bar_6 from '../img/bar_6.svg';
 import desert_dark_bottom from '../img/desertdark_bottom.svg';
 import desert_dark_top from '../img/desertdark_top.png';
 import polar_juggling from '../img/polar_juggling.svg';
-import bar_7 from '../img/bar_7.svg';
 import polar_bottom from '../img/polar_bottom.svg';
 import polar_top from '../img/polar_top.png';
 import polar_clock from '../img/polar_clock.png';
-import bar_8 from '../img/bar_8.svg';
+import bar_4 from '../img/bar_4.svg';
 
 var bg_gradations = ["linear-gradient(to bottom, #D88089CC, #FFC586CC)", 
 "linear-gradient(to bottom, #3B5295CC, #B0D8D9CC)", 
@@ -57,7 +53,7 @@ var answers2 = ["'왠지 이쪽 길이 맞을 것 같아'\n감으로 찍어서 �
 "돈을 벌 수는 없지만\n흥미로운 기술", "헐ㅜㅜ 괜찮아? 너무 속상하겠다...",
 "여행의 하이라이트!\n 열기구 타기", "사막 여우의 방법에\n나만의 느낌을 추가해서 굴을 판다",
 "눈사람 만들기", "시간이 늦어서\n이제 좀 쉬러갈게, 안녕~"];
-var progress_images = [bar_1, bar_2, bar_3, bar_4, bar_5, bar_6, bar_7, bar_8];
+var progress_images = [bar_1, bar_2, bar_2, bar_3, bar_3, bar_3, bar_4, bar_4];
 var button_colors = ["#E6596A", "#7388C2", "#7388C2", "#60A6AF", "#60A6AF", "#59375D", "#7A83E0", "#7A83E0"];
 
 class QuizCard extends React.Component {
