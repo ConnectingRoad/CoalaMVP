@@ -85,7 +85,7 @@ class QuizCard extends React.Component {
         if (this.id !== 7) {
             e.preventDefault();
             let newAnswers = this.state.answers;
-            newAnswers.push(e.target.id);
+            if (this.id !== 4 && this.id !== 5) newAnswers.push(e.target.id);
             this.id++;
             this.setState({
                 bg_gradation: bg_gradations[this.id],

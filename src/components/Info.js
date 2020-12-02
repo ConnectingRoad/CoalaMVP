@@ -36,7 +36,8 @@ class Info extends React.Component {
                 <img className="info__img" alt="naming_img" src={ naming_img }/>
                 <div className="info__text">당신의 코알라에게 이름을 지어주세요</div>
                 <input className="info__name" onChange={this.handleChange} 
-                    style={ {border: this.state.border} } placeholder={this.state.placeholder}/>
+                    style={ {border: this.state.border} } placeholder={this.state.placeholder}
+                    maxLength="10"/>
                 <Link className="info__male" to={{
                     pathname: '/loading',
                     state: { name, sex: "남" }
