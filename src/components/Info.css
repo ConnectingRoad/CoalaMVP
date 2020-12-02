@@ -18,19 +18,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.7rem;
+    font-weight: 500;
     color: #000000;
 }
 .info .info__name {
     position: absolute;
-    top: 55%;
+    top: 51%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    height: 11%;
+    height: 7%;
     border-radius: 38px;
-    border: solid #59375D;
+    border: 0.18em solid #ffffff;
     font-size: 1.6rem;
     background-color: #00000000;
     text-align: center;
@@ -39,20 +39,20 @@
     outline: none;
 }
 .info .info__name::placeholder {
-    color: #DD283C;
+    color: rgb(221, 40, 60, 0.9);
 }
 .info .info__male, .info__female {
     border-radius: 38px;
     width: 38%;
-    height: 11%;
-    background-color: #59375d;
-    border: solid #59375D;
-    color: white;
+    height: 9%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 0.2em solid rgb(191, 74, 79, 0.6);
+    color: black;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-decoration: unset;
     text-align: center;
-    box-shadow: 2px 2px 6px 0 rgba(128, 88, 82, 0.8);
+    box-shadow: 0px 3px 10px 0 rgba(128, 88, 82, 0.4);
     box-sizing: border-box;
 }
 
@@ -64,21 +64,21 @@
 
 .info .info__male {
     position: absolute;
-    top: 73%;
+    top: 65%;
     left: 28%;
     transform: translate(-50%, -50%);
 }
 
 .info .info__female {
     position: absolute;
-    top: 73%;
+    top: 65%;
     left: 72%;
     transform: translate(-50%, -50%);
 }
 
 .info__male p, .info__female p {
     position: absolute;
-    top: 19%;
+    top: 7%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
