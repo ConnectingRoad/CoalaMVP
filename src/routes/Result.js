@@ -19,6 +19,7 @@ class Result extends React.Component{
             return (
                 <div className="result">
                     <img className="result__bg" alt="result_bg" src={intro_bg}/>
+                <div>{answers}</div>
                 </div>
             );
         } else {
