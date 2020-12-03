@@ -8,6 +8,7 @@ import ResultCard from '../components/ResultCard';
 import ClassCard from '../components/ClassCard';
 import OpengraphReactComponent from 'opengraph-react';
 
+const config = require('../config/key');
 
 class Result extends React.Component {
 
@@ -106,20 +107,27 @@ class Result extends React.Component {
                                     <div>CoalaGram</div>
                                 </header>
                                 <ResultCard 
-                                    key={mbti.id}
+                                    key={mbti._id}
                                     index={mbti.index}
                                     userName={name}
                                     coalaName={mbti.name}
                                     description={mbti.description}/>
+                                <div className="classes_title">
+                                    <p id="title">당신이 좋아할만한 클래스 추천!</p>
+                                    <p id="subtitle">취향저격에는 하트 꾹</p>
+                                </div>
                                 <div className="result__classes">
-                                    {mbti.classes.map(c => (
+                                    {mbti.classes.map((c, index) => (
                                         <OpengraphReactComponent
+                                            key={index}
                                             site={c.url}
-                                            appId={'896ea2c5-f5e9-45a0-81af-28428c693574'}
+                                            appId={config.opengraphApiKey}
                                             onlyFetch={true}
                                         >
                                             <ClassCard 
-                                                key={c.name}/>
+                                                key={index}
+                                                index={index}
+                                                url={c.url}/>
                                         </OpengraphReactComponent> 
                                     ))}
                                 </div>

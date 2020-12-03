@@ -48,12 +48,31 @@
 }
 .result__header div {
     font-size: 3rem;
+    font-weight: 600;
+}
+.result__finish .classes_title {
+    margin: 24px 0 16px 45px;
+}
+.classes_title #title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.classes_title #subtitle {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #767676;
+    margin-top: 0;
 }
 .result__finish .result__classes {
     display: flex;
-    height: 300px;
+    height: auto;
     flex-wrap: nowrap;
     overflow-x: scroll;
+    margin-left: 45px;
+}
+.result__classes::-webkit-scrollbar {
+    height: 0;
 }
 @media screen and (min-width: 500px) {
     .result .result__progress {
