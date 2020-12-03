@@ -3,7 +3,7 @@
     border: none;
     border-radius: 38px;
     width: 94%;
-    height: 698px;
+    height: auto;
     margin: 6px auto;
     box-shadow: 3px 3px 8px 0 rgba(128, 88, 82, 0.8);
 }
@@ -31,7 +31,9 @@
     height: 240px;
 }
 .result__card .card__description {
-    word-break: keep-all;
+    white-space: pre-line;
     padding: 12px 22px;
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
+    background-color: #ffffffCC;
+    border-radius: 0 0 38px 38px;
 }

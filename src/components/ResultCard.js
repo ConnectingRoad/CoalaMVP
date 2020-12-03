@@ -11,14 +11,14 @@ import coala_7 from '../img/coala_7.svg';
 import coala_8 from '../img/coala_8.svg';
 
 
-function ResultCard({ index, name, description }) {
+function ResultCard({ index, userName, coalaName, description }) {
     const images = [coala_1, coala_2, coala_3, coala_4, coala_5, coala_6, coala_7, coala_8];
 
     return (
         <div className="result__card">
             <div className="card__header">
                 <img alt="user_profile" src={user_profile}/>
-                <span>{name}</span>
+                <span>{userName}</span>
             </div>
             <div className="coala__container">
                 <img alt="coala_img" src={images[index]}/>

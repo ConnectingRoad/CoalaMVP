@@ -5,6 +5,9 @@ import village_bottom from '../img/village_bottom.svg';
 import village_top from '../img/village_top.png';
 import bar_5 from '../img/bar_5.svg';
 import ResultCard from '../components/ResultCard';
+import ClassCard from '../components/ClassCard';
+import OpengraphReactComponent from 'opengraph-react';
+
 
 class Result extends React.Component {
 
@@ -24,7 +27,36 @@ class Result extends React.Component {
                 answers: answers
             })
             .then(response => response.data.mbti);
-            
+        
+        mbti.description = mbti.description.replace(/\\n/g, '\n');
+        
+        let newClasses = [];
+
+        if (sex === "여") newClasses.push(mbti.classes[7]);
+        else newClasses.push(mbti.classes[8]);
+
+        for (var i = 0; i < answers.length; i++) {
+            switch (i) {
+                case 1:
+                    if (answers[i] === 1) newClasses.push(mbti.classes[0]);
+                    else newClasses.push(mbti.classes[1]);
+                    break;
+                case 2:
+                    if (answers[i] === 1) newClasses.push(mbti.classes[2]);
+                    else newClasses.push(mbti.classes[3]);
+                    break;
+                case 6:
+                    if (answers[i] === 1) newClasses.push(mbti.classes[4]);
+                    else if (answers[i] === 2) newClasses.push(mbti.classes[5]);
+                    else newClasses.push(mbti.classes[6]);
+                    break;
+                default:
+                    break;
+            }
+        }
+        
+        mbti.classes = newClasses;
+
         setTimeout(() => {
             this.setState({mbti, isLoading: false});
         }, 3000)
@@ -76,8 +108,21 @@ class Result extends React.Component {
                                 <ResultCard 
                                     key={mbti.id}
                                     index={mbti.index}
-                                    name={name}
+                                    userName={name}
+                                    coalaName={mbti.name}
                                     description={mbti.description}/>
+                                <div className="result__classes">
+                                    {mbti.classes.map(c => (
+                                        <OpengraphReactComponent
+                                            site={c.url}
+                                            appId={'896ea2c5-f5e9-45a0-81af-28428c693574'}
+                                            onlyFetch={true}
+                                        >
+                                            <ClassCard 
+                                                key={c.name}/>
+                                        </OpengraphReactComponent> 
+                                    ))}
+                                </div>
                             </div>
                         )
                 }

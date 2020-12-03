@@ -35,6 +35,7 @@
     background: linear-gradient(to bottom, #D88089CC, #FFC586CC);
     box-sizing: border-box;
     margin: 0;
+    padding-bottom: 24px;
 }
 .result__finish .result__header {
     background-color: white;
@@ -47,6 +48,12 @@
 }
 .result__header div {
     font-size: 3rem;
+}
+.result__finish .result__classes {
+    display: flex;
+    height: 300px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
 }
 @media screen and (min-width: 500px) {
     .result .result__progress {
