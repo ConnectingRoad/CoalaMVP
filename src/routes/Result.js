@@ -4,6 +4,7 @@ import './Result.css';
 import village_bottom from '../img/village_bottom.svg';
 import village_top from '../img/village_top.png';
 import bar_5 from '../img/bar_5.svg';
+import ResultCard from '../components/ResultCard';
 
 class Result extends React.Component {
 
@@ -42,7 +43,9 @@ class Result extends React.Component {
     
 
     render() {
-        const {isLoading, mbti} = this.state;
+        const { isLoading, mbti } = this.state;
+        const { location } = this.props;
+        const { name } = (location.state === undefined)? { name: "" } : location.state;
 
         return (
             <section className="container">
@@ -67,7 +70,14 @@ class Result extends React.Component {
                         )
                         : (
                             <div className="result__finish">
-                                { mbti.type }
+                                <header className="result__header">
+                                    <div>CoalaGram</div>
+                                </header>
+                                <ResultCard 
+                                    key={mbti.id}
+                                    index={mbti.index}
+                                    name={name}
+                                    description={mbti.description}/>
                             </div>
                         )
                 }
