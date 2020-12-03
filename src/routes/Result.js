@@ -7,6 +7,7 @@ import bar_5 from '../img/bar_5.svg';
 import ResultCard from '../components/ResultCard';
 import ClassCard from '../components/ClassCard';
 import OpengraphReactComponent from 'opengraph-react';
+import Feedback from '../components/Feedback';
 
 const config = require('../config/key');
 
@@ -16,18 +17,21 @@ class Result extends React.Component {
         super(props);
         this.state = {
             isLoading: true,
-            mbti: {}
+            mbti: {},
+            userId: {}
         }
     }
 
     getMBTI = async (name, sex, answers) => {
-        const mbti = await axios
+        const data = await axios
             .post('/api/mbti/register', {
                 name: name,
                 sex: sex,
                 answers: answers
             })
-            .then(response => response.data.mbti);
+            .then(response => response.data);
+        const mbti = data.mbti;
+        const userId = data.userId;
         
         mbti.description = mbti.description.replace(/\\n/g, '\n');
         
@@ -57,9 +61,9 @@ class Result extends React.Component {
         }
         
         mbti.classes = newClasses;
-
+        console.log(userId);
         setTimeout(() => {
-            this.setState({mbti, isLoading: false});
+            this.setState({mbti, isLoading: false, userId: userId});
         }, 3000)
     }
 
@@ -76,9 +80,9 @@ class Result extends React.Component {
     
 
     render() {
-        const { isLoading, mbti } = this.state;
+        const { isLoading, mbti, userId } = this.state;
         const { location } = this.props;
-        const { name } = (location.state === undefined)? { name: "" } : location.state;
+        const { name } = (location.state === undefined)? { name: "", answers: [] } : location.state;
 
         return (
             <section className="container">
@@ -131,6 +135,9 @@ class Result extends React.Component {
                                         </OpengraphReactComponent> 
                                     ))}
                                 </div>
+                                <Feedback 
+                                    key={userId}
+                                    userId={userId}/>
                             </div>
                         )
                 }
