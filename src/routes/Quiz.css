@@ -15,7 +15,7 @@
     height: 0;
     padding-bottom: 120%;
     margin: 13% 10% 0px 10%;
-    box-shadow: 3px 3px 8px 0 rgba(128, 88, 82, 0.8);
+    box-shadow: 0px 3px 28px 0 rgba(65, 65, 65, 0.3);
     position: relative;
 }
 
@@ -49,7 +49,8 @@
     white-space: pre-wrap;
     width: 100%;
     font-size: 1.8rem;
-    font-weight: 600;
+    line-height: 02.3rem;
+    font-weight: 500;
     color: #000000;
     text-align: center;
 }
@@ -60,16 +61,17 @@
     background-color: #59375d;
     color: white;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    line-height: 02.0rem;
     text-decoration: unset;
     text-align: center;
-    box-shadow: 2px 2px 6px 0 rgba(128, 88, 82, 0.8);
+    box-shadow: 2px 3px 15px 0  rgba(65, 65, 65, 0.3);
     box-sizing: border-box;
     white-space: pre-wrap;
     display: table;
 }
 .quiz__card .quiz__answer1:active, .quiz__answer2:active, .quiz__answer3:active {
-    box-shadow: inset 0 0 3px rgba(128, 88, 82, 0.8);
+    box-shadow: inset 0 0 3px rgba(133, 116, 113, 0.4);
     outline: none;
     -webkit-tap-highlight-color : transparent;
 }
