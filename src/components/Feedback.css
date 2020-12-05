@@ -17,16 +17,83 @@
     width: 48px;
     margin-left: 37px;
 }
-.feedback__header span {
+.feedback__header a {
     margin-left: 14px;
     font-size: 1.6rem;
     font-weight: 500;
     color: #1e1e1e;
-    flex-grow: 0.8;
+    flex-grow: 0.85;
+    text-decoration: none;
+    -webkit-tap-highlight-color : transparent;
 }
-.feedback__header .paper_plane {
-    width: 28px;
+.feedback #chat {
+    background: #e7e7e7;
+    display: flex;
+    width: fit-content;
+    color: #1e1e1e;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 24px;
+    box-sizing: content-box;
 }
-.feedback__header .paper_plan:hover {
-    
+.feedback .chat__insta{
+    margin-top: 30px;
+    margin-left: 70px;
+}
+.chat__insta p {
+    margin: 14px 10px;
+}
+.feedback .chat__plane {
+    margin-top: 10px;
+    margin-left: 70px;
+    align-items: center;
+}
+.chat__plane img {
+    margin-left: 10px;
+    margin-right: 3px;
+    width: 15px;
+}
+.chat__plane p {
+    margin-right: 10px;
+}
+.feedback .chat__container {
+    display: flex;
+}
+.chat__container .chat__star {
+    margin-top: 10px;
+    margin-left: 11px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.chat__container img {
+    width: 39px;
+    margin-left: 20px;
+    align-self: flex-end;
+}
+.chat__star p {
+    margin: 12px 0 0 0;
+}
+.chat__star .review__stars {
+    display: flex;
+    margin: 10px 40px 14px 40px;
+}
+.review__stars input + label { 
+    display: inline-block;
+    cursor: pointer;
+    background: url('../img/star_off.svg')no-repeat; 
+}
+.review__stars input:checked + label {
+    background: url('../img/star_on.svg')no-repeat;
+    -webkit-tap-highlight-color : transparent;
+}
+.review__stars label:active {
+    -webkit-tap-highlight-color : transparent;
+}    
+.review__stars input {
+    display: none;
+}
+.review__stars label {
+    width: 36px;
+    height: 34px;
 }
