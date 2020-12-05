@@ -46,9 +46,8 @@
     align-items: center;
     justify-content: center;
 }
-.result__header div {
-    font-size: 3rem;
-    font-weight: 600;
+.result__header img{
+    width: 30%;
 }
 .result__finish .classes_title {
     margin: 24px 0 16px 45px;
@@ -78,6 +77,9 @@
     display: flex;
     width: fit-content;
     margin: 0 auto;
+}
+.result__finish .result__replay:hover {
+    cursor: pointer;
 }
 .result__replay span {
     font-size: 1.8rem;

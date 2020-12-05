@@ -28,8 +28,10 @@ function FeedBack({ userId }) {
     return (
         <div className="feedback">
             <div className="feedback__header">
-                <img alt="coala_profile" src={coala_profile} className="coala__profile"/>
-                <a href="https://www.instagram.com/c0ala_official/" target="_blank" rel="noreferrer">c0ala_official</a>
+                <a href="https://www.instagram.com/c0ala_official/" target="_blank" rel="noreferrer">
+                    <img alt="coala_profile" src={coala_profile} className="coala__profile"/>
+                </a>
+                <a id="text" href="https://www.instagram.com/c0ala_official/" target="_blank" rel="noreferrer">c0ala_official</a>
                 <img alt="paper_plane" src={paper_plane} className="paper__plane"/>
             </div>
             <div className="chat__insta" id="chat">
@@ -45,9 +47,10 @@ function FeedBack({ userId }) {
                     <p>테스트가 잘 맞았나요?</p>
                     <div className="review__stars">
                         {[0, 1, 2, 3, 4].map(i => (
-                            <div className="review__star">
-                                <input key={"star" + i} type="checkbox" id={"star" + i} checked={Checks[i]}/>
-                                <label htmlFor={"star" + i} onClick={handleClickStar}></label>  
+                            <div key={"div" + i} className="review__star">
+                                <input key={"star" + i} type="checkbox" id={"star" + i} checked={Checks[i]}
+                                onChange={()=>{}}/>
+                                <label key={"label" + i} htmlFor={"star" + i} onClick={handleClickStar}></label>  
                             </div>
                         ))}
                     </div>

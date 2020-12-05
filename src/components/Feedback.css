@@ -18,7 +18,7 @@
     width: 48px;
     margin-left: 37px;
 }
-.feedback__header a {
+.feedback__header a#text {
     margin-left: 14px;
     font-size: 1.6rem;
     font-weight: 500;
