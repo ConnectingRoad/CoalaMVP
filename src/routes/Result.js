@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './Result.css';
+import './Result_Loder.css';
 import village_bottom from '../img/village_bottom.svg';
 import village_top from '../img/village_top.png';
 import bar_9 from '../img/bar_9.svg';
@@ -113,6 +114,18 @@ class Result extends React.Component {
                                     
                                     나라는 코알라는 말이야...
                                     </p>
+                                </div>
+                                <div class="DNA_cont">
+                                    <div class="nucleobase"></div>
+                                    <div class="nucleobase"></div>
+                                    <div class="nucleobase"></div>
+                                    <div class="nucleobase"></div>
+                                    <div class="nucleobase"></div>
+                                    <div class="nucleobase"></div>
+                                    <div class="nucleobase"></div>
+                                    <div class="nucleobase"></div>
+                                    <div class="nucleobase"></div>
+                                    <div class="nucleobase"></div>
                                 </div>  
                                 <img className="result__progress" alt="result_progress" src={bar_9}/>
                             </div>
