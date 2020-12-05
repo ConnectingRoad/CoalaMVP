@@ -6,7 +6,7 @@ import coala_profile_s from '../img/coala_profile_s.svg';
 import paper_plane from '../img/paper_plane.svg';
 import TextareaAutosize from 'react-textarea-autosize';
 
-function FeedBack({ userId }) {
+function FeedBack({ userId, name, sex, answers }) {
     const [Checks, setChecks] = useState([false, false, false, false, false])
     const [Score, setScore] = useState(0)
     const [Text, setText] = useState("")
