@@ -30,6 +30,9 @@
 .feedback__header .paper__plane:hover {
     cursor: pointer;
 }
+.feedback__header .paper__plane:hover:active {
+    -webkit-tap-highlight-color: transparent;
+}
 .feedback #chat {
     background: #e7e7e7;
     display: flex;

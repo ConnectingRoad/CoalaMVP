@@ -5,8 +5,11 @@ import coala_profile from '../img/coala_profile.svg';
 import coala_profile_s from '../img/coala_profile_s.svg';
 import paper_plane from '../img/paper_plane.svg';
 import TextareaAutosize from 'react-textarea-autosize';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function FeedBack({ userId, name, sex, answers }) {
+function FeedBack({ userId }) {
     const [Checks, setChecks] = useState([false, false, false, false, false])
     const [Score, setScore] = useState(0)
     const [Text, setText] = useState("")
@@ -62,6 +65,10 @@ function FeedBack({ userId, name, sex, answers }) {
         postText();
     }, [userId, FeedbackText])
 
+    const notify = () => toast("클립보드에 복사되었습니다", {
+        autoClose: 2000
+    });
+
     return (
         <div className="feedback">
             <div className="feedback__header">
@@ -69,7 +76,11 @@ function FeedBack({ userId, name, sex, answers }) {
                     <img alt="coala_profile" src={coala_profile} className="coala__profile"/>
                 </a>
                 <a id="text" href="https://www.instagram.com/c0ala_official/" target="_blank" rel="noreferrer">c0ala_official</a>
-                <img alt="paper_plane" src={paper_plane} className="paper__plane"/>
+                <CopyToClipboard text={"http://localhost:3000/CoalaMVP#/result/" + userId}
+                    onCopy={notify}>
+                    <img alt="paper_plane" src={paper_plane} className="paper__plane"/>
+                </CopyToClipboard>
+                <ToastContainer/>
             </div>
             <div className="chat__insta" id="chat">
                 <p>위 아이디를 누르면 인스타에서 결과 풀이를 더<br/>볼 수 있어요!</p>
