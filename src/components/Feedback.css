@@ -27,6 +27,9 @@
     text-decoration: none;
     -webkit-tap-highlight-color : transparent;
 }
+.feedback__header .paper__plane:hover {
+    cursor: pointer;
+}
 .feedback #chat {
     background: #e7e7e7;
     display: flex;
@@ -59,8 +62,12 @@
 }
 .feedback .chat__container {
     display: flex;
+    flex-direction: column;
 }
-.chat__container .chat__star {
+.chat__container .chat__container__star {
+    display: flex;
+}
+.chat__container__star .chat__star {
     margin-top: 10px;
     margin-left: 11px;
     display: flex;
@@ -97,6 +104,28 @@
 .review__stars label {
     width: 36px;
     height: 34px;
+}
+.chat__container .chat__score {
+    display: flex;
+    flex-direction: row;
+}
+.chat__score .no__score{
+    margin-top: 10px;
+    margin-left: 11px;
+}
+.no__score p {
+    margin: 14px 10px;
+}
+.chat__container .chat__success {
+    display: flex;
+    flex-direction: row;
+}
+.chat__success .feedback__success{
+    margin-top: 10px;
+    margin-left: 11px;
+}
+.feedback__success p {
+    margin: 14px 10px;
 }
 .feedback .feedback__input {
     border: 1px solid rgba(112, 112, 112, 0.64);
@@ -139,4 +168,7 @@
 }
 .feedback__input button:focus {
     outline: none;
+}
+.feedback__input button:hover {
+    cursor: pointer;
 }

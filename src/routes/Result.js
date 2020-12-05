@@ -74,8 +74,7 @@ class Result extends React.Component {
     onHeartChanged(classInfo) {
         let newClasses = this.state.classes
         newClasses.splice(classInfo.index, 1, classInfo.data)
-        this.setState({classes: newClasses});
-        this.postLike()
+        this.setState({classes: newClasses}, this.postLike);
     }
 
     postLike = async() =>

@@ -40,3 +40,6 @@
 .cover button:focus {
     outline: none;
 }
+.cover button:hover {
+    cursor: pointer;
+}
