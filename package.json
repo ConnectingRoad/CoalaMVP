@@ -10,12 +10,17 @@
     "http-proxy-middleware": "^1.0.6",
     "opengraph-react": "^1.3.0",
     "react": "^17.0.1",
+    "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^17.0.1",
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-textarea-autosize": "^8.3.0",
+<<<<<<< HEAD
     "react-transition-group": "^4.4.1",
+=======
+    "react-toastify": "^6.1.0",
+>>>>>>> 325801532b5f5ce41fa8df40423febde3cafb06e
     "web-vitals": "^0.2.4"
   },
   "scripts": {

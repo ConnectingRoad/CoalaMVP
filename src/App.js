@@ -4,7 +4,8 @@ import Start from './routes/Start';
 import Loading from './routes/Loading';
 import Quiz from './routes/Quiz';
 import Result from './routes/Result';
-import Cover from './routes/Cover'
+import Cover from './routes/Cover';
+import SharedResult from './routes/SharedResult';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Route path="/start" component={Start}/>
       <Route path="/loading" component={Loading}/>
       <Route path="/quiz" component={Quiz}/>
-      <Route path="/result" component={Result}/>
+      <Route path="/result" exact={true} component={Result}/>
+      <Route path="/result/:id" component={SharedResult}/>
     </HashRouter>
   );
 }

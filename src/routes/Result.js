@@ -9,7 +9,8 @@ import ResultCard from '../components/ResultCard';
 import ClassCard from '../components/ClassCard';
 import OpengraphReactComponent from 'opengraph-react';
 import Feedback from '../components/Feedback';
-import replay from '../img/replay.svg'
+import replay from '../img/replay.svg';
+import coalagram from '../img/coalagram_title.png';
 
 const config = require('../config/key');
 
@@ -20,8 +21,10 @@ class Result extends React.Component {
         this.state = {
             isLoading: true,
             mbti: {},
-            userId: {}
+            userId: {},
+            classes: [{title: "", like: false}, {title: "", like: false}, {title: "", like: false}, {title: "", like: false}]
         }
+        this.onHeartChanged = this.onHeartChanged.bind(this)
     }
 
     getMBTI = async (name, sex, answers) => {
@@ -63,11 +66,21 @@ class Result extends React.Component {
         }
         
         mbti.classes = newClasses;
-        console.log(userId);
+
         setTimeout(() => {
             this.setState({mbti, isLoading: false, userId: userId});
         }, 3000)
     }
+
+    onHeartChanged(classInfo) {
+        let newClasses = this.state.classes
+        newClasses.splice(classInfo.index, 1, classInfo.data)
+        this.setState({classes: newClasses}, this.postLike);
+    }
+
+    postLike = async() =>
+        await axios.post("/api/users/like", {userId: this.state.userId, classes: this.state.classes})
+            .then(res => console.log(res))
 
     componentDidMount() {
         const {location, history} = this.props;
@@ -79,12 +92,10 @@ class Result extends React.Component {
         }
     }
 
-    
-
     render() {
         const { isLoading, mbti, userId } = this.state;
         const { location } = this.props;
-        const { name } = (location.state === undefined)? { name: "", answers: [] } : location.state;
+        const { name } = (location.state === undefined)? { name: "" } : location.state;
 
         return (
             <section className="container">
@@ -122,7 +133,7 @@ class Result extends React.Component {
                         : (
                             <div className="result__finish">
                                 <header className="result__header">
-                                    <div>CoalaGram</div>
+                                    <img alt="title" src={coalagram}/>
                                 </header>
                                 <ResultCard 
                                     key={mbti._id}
@@ -145,14 +156,15 @@ class Result extends React.Component {
                                             <ClassCard 
                                                 key={index}
                                                 index={index}
-                                                url={c.url}/>
+                                                url={c.url}
+                                                onChange={this.onHeartChanged}/>
                                         </OpengraphReactComponent> 
                                     ))}
                                 </div>
                                 <Feedback 
                                     key={userId}
                                     userId={userId}/>
-                                <div className="result__replay">
+                                <div className="result__replay" onClick={e => this.props.history.push('/')}>
                                     <span>테스트 다시하기</span>
                                     <img alt="replay" src={replay}/>
                                 </div>        
