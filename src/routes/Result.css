@@ -74,6 +74,15 @@
 .result__classes::-webkit-scrollbar {
     height: 0;
 }
+.result__finish .result__replay {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+}
+.result__replay span {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
 @media screen and (min-width: 500px) {
     .result .result__progress {
         width: 500px;

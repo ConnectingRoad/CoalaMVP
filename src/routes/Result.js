@@ -8,6 +8,7 @@ import ResultCard from '../components/ResultCard';
 import ClassCard from '../components/ClassCard';
 import OpengraphReactComponent from 'opengraph-react';
 import Feedback from '../components/Feedback';
+import replay from '../img/replay.svg'
 
 const config = require('../config/key');
 
@@ -138,6 +139,10 @@ class Result extends React.Component {
                                 <Feedback 
                                     key={userId}
                                     userId={userId}/>
+                                <div className="result__replay">
+                                    <span>테스트 다시하기</span>
+                                    <img alt="replay" src={replay}/>
+                                </div>        
                             </div>
                         )
                 }

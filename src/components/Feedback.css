@@ -1,8 +1,9 @@
 .feedback {
     margin: 24px 16px;
     background: #ffffffCC;
-    height: 430px;
+    height: auto;
     border-radius: 38px;
+    padding-bottom: 0.1px;
 }
 .feedback .feedback__header {
     display: flex;
@@ -96,4 +97,46 @@
 .review__stars label {
     width: 36px;
     height: 34px;
+}
+.feedback .feedback__input {
+    border: 1px solid rgba(112, 112, 112, 0.64);
+    border-radius: 23px;
+    background: white;
+    margin: 28px auto;
+    width: 92%;
+    height: auto;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.feedback__input .input__text {
+    border: none;
+    background: transparent;
+    resize: none;
+    font-size: 14pt;
+    width: 78%;
+    margin-left: 4%;
+    font-family: "Noto Sans KR", sans-serif;
+    overflow: hidden;
+}
+.feedback__input .input__text:focus {
+    outline: none;
+}
+.feedback__input button {
+    background: transparent;
+    border: none;
+    border-radius: 38px;
+    width: fit-content;
+    font-size: 1.6rem;
+    color: #4e6edc;
+    font-weight: 600;
+    margin: 3% 1%;
+}
+.feedback__input button:active {
+    background-color: #6c6c6c;
+    color: white;
+    -webkit-tap-highlight-color: none;
+}
+.feedback__input button:focus {
+    outline: none;
 }
