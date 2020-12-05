@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 class Info extends React.Component {
     state = {
         name: "",
-        border: "solid #59375D",
+        border: "0.18em solid #ffffff",
         placeholder: "",
     }
 
@@ -21,7 +21,7 @@ class Info extends React.Component {
         if (!this.state.name.trim()) {
             e.preventDefault();
             this.setState({
-                border: "solid #DD283C",
+                border: "0.18em solid rgb(221, 40, 60, 0.8)",
                 placeholder: "이름을 입력해주세요"
             })
         }

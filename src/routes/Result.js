@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Result.css';
 import village_bottom from '../img/village_bottom.svg';
 import village_top from '../img/village_top.png';
-import bar_5 from '../img/bar_5.svg';
+import bar_9 from '../img/bar_9.svg';
 import ResultCard from '../components/ResultCard';
 import ClassCard from '../components/ClassCard';
 import OpengraphReactComponent from 'opengraph-react';
@@ -102,7 +102,7 @@ class Result extends React.Component {
                                     나라는 코알라는 말이야...
                                     </p>
                                 </div>  
-                                <img className="result__progress" alt="result_progress" src={bar_5}/>
+                                <img className="result__progress" alt="result_progress" src={bar_9}/>
                             </div>
                         )
                         : (
