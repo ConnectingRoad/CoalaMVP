@@ -115,17 +115,17 @@ class Result extends React.Component {
                                     나라는 코알라는 말이야...
                                     </p>
                                 </div>
-                                <div class="DNA_cont">
-                                    <div class="nucleobase"></div>
-                                    <div class="nucleobase"></div>
-                                    <div class="nucleobase"></div>
-                                    <div class="nucleobase"></div>
-                                    <div class="nucleobase"></div>
-                                    <div class="nucleobase"></div>
-                                    <div class="nucleobase"></div>
-                                    <div class="nucleobase"></div>
-                                    <div class="nucleobase"></div>
-                                    <div class="nucleobase"></div>
+                                <div className="DNA_cont">
+                                    <div className="nucleobase"></div>
+                                    <div className="nucleobase"></div>
+                                    <div className="nucleobase"></div>
+                                    <div className="nucleobase"></div>
+                                    <div className="nucleobase"></div>
+                                    <div className="nucleobase"></div>
+                                    <div className="nucleobase"></div>
+                                    <div className="nucleobase"></div>
+                                    <div className="nucleobase"></div>
+                                    <div className="nucleobase"></div>
                                 </div>  
                                 <img className="result__progress" alt="result_progress" src={bar_9}/>
                             </div>

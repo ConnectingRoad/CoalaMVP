@@ -1,15 +1,14 @@
 .cover {
-    margin: 0;
     height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; 
-    margin-top: 20%;
+    justify-content: flex-start;
 }
 .cover img {
     width: 152px;
+    margin-top: 40%;
 }
 .cover #p1 {
     font-size: 2.2rem;
@@ -43,4 +42,10 @@
 }
 .cover button:hover {
     cursor: pointer;
+}
+@media screen and (min-width: 500px) {
+    .cover img {
+        width: 152px;
+        margin-top: 20%;
+    }
 }

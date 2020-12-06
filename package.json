@@ -16,11 +16,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-textarea-autosize": "^8.3.0",
-<<<<<<< HEAD
-    "react-transition-group": "^4.4.1",
-=======
     "react-toastify": "^6.1.0",
->>>>>>> 325801532b5f5ce41fa8df40423febde3cafb06e
+    "react-transition-group": "^4.4.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

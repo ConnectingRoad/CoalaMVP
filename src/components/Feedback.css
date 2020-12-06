@@ -14,18 +14,28 @@
     border-radius: 38px 38px 0 0;
     box-shadow: 0 2px 6px -3px rgba(128, 88, 82, 0.8);
 }
+.feedback__header a#img {
+    width: 12%;
+    margin-left: 8%;
+}
+.feedback__header a#img:active {
+    -webkit-tap-highlight-color: transparent;
+}
 .feedback__header .coala__profile {
-    width: 48px;
-    margin-left: 37px;
+    width: 100%;
+    margin: 1px;
 }
 .feedback__header a#text {
-    margin-left: 14px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 500;
     color: #1e1e1e;
-    flex-grow: 0.85;
+    flex-grow: 0.8;
     text-decoration: none;
     -webkit-tap-highlight-color : transparent;
+    margin-left: 3%;
+}
+.feedback__header .paper__plane {
+    width: 8%;
 }
 .feedback__header .paper__plane:hover {
     cursor: pointer;
@@ -36,23 +46,23 @@
 .feedback #chat {
     background: #e7e7e7;
     display: flex;
-    width: fit-content;
     color: #1e1e1e;
     font-size: 1.6rem;
     font-weight: 500;
     border-radius: 24px;
-    box-sizing: content-box;
 }
 .feedback .chat__insta{
+    width: 70%;
     margin-top: 30px;
-    margin-left: 70px;
+    margin-left: 15%;
 }
 .chat__insta p {
     margin: 14px 10px;
 }
 .feedback .chat__plane {
+    width: fit-content;
     margin-top: 10px;
-    margin-left: 70px;
+    margin-left: 15%;
     align-items: center;
 }
 .chat__plane img {
@@ -71,15 +81,17 @@
     display: flex;
 }
 .chat__container__star .chat__star {
+    width: 70%;
     margin-top: 10px;
-    margin-left: 11px;
+    margin-left: 2%;
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 .chat__container img {
-    width: 39px;
-    margin-left: 20px;
+    width: 10%;
+    margin-left: 3%;
     align-self: flex-end;
 }
 .chat__star p {
@@ -87,7 +99,7 @@
 }
 .chat__star .review__stars {
     display: flex;
-    margin: 10px 40px 14px 40px;
+    margin: 10px 0 14px 0;
 }
 .review__stars input + label { 
     display: inline-block;
@@ -146,8 +158,8 @@
     background: transparent;
     resize: none;
     font-size: 14pt;
-    width: 78%;
-    margin-left: 4%;
+    width: 70%;
+    margin-left: 5%;
     font-family: "Noto Sans KR", sans-serif;
     overflow: hidden;
 }
@@ -162,10 +174,11 @@
     font-size: 1.6rem;
     color: #4e6edc;
     font-weight: 600;
-    margin: 3% 1%;
+    margin: 3% 2%;
+    padding: 0;
 }
 .feedback__input button:active {
-    background-color: #6c6c6c;
+    background-color: #cccccc;
     color: white;
     -webkit-tap-highlight-color: none;
 }

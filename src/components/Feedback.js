@@ -18,7 +18,7 @@ function FeedBack({ userId }) {
     const [Visibility, setVisibility] = useState(["visible", "hidden"])
 
     const handleChangeStar = e => {
-        let checks = [[false, false, false, false, false]];
+        let checks = [false, false, false, false, false];
         const score = parseInt(e.target.id.charAt(4)) + 1;
 
         for (var i = 0; i < score; i++) {
@@ -72,7 +72,7 @@ function FeedBack({ userId }) {
     return (
         <div className="feedback">
             <div className="feedback__header">
-                <a href="https://www.instagram.com/c0ala_official/" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/c0ala_official/" target="_blank" rel="noreferrer" id="img">
                     <img alt="coala_profile" src={coala_profile} className="coala__profile"/>
                 </a>
                 <a id="text" href="https://www.instagram.com/c0ala_official/" target="_blank" rel="noreferrer">c0ala_official</a>
@@ -83,11 +83,11 @@ function FeedBack({ userId }) {
                 <ToastContainer/>
             </div>
             <div className="chat__insta" id="chat">
-                <p>위 아이디를 누르면 인스타에서 결과 풀이를 더<br/>볼 수 있어요!</p>
+                <p>위 아이디를 누르면 인스타에서 결과 풀이를 더 볼 수 있어요!</p>
             </div>
             <div className="chat__plane" id="chat">
                 <img alt="paper_plane" src={paper_plane} />
-                <p>아이콘을 눌러서 결과를 친구와 공유해 보세요 🙂 </p>
+                <p>을 눌러 결과를 공유해 보세요🙂 </p>
             </div>
             <div className="chat__container">
                 <div className="chat__container__star">

@@ -1,14 +1,13 @@
 .info {
     width: 100%;
+    align-self: center;
     position: relative;
 }
 .info .info__bg {
     width: 100%;
-    margin-top: 5%;
 }
 .info .info__img {
     position: absolute;
-    margin-top: 5%;
     left: 50.3%;
     transform: translate(-50%, 24%);
     width: 30%;

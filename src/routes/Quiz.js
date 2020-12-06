@@ -45,7 +45,7 @@ var texts = ["두 갈래 길에 들어선 코알라\n이정표가 없다! 이때
 "사막에 도착한 코알라\n친구와 싸워 울고 있는 사막 여우가 있다\n이때 당신이 건넬 말은?",
 "친해진 사막 여우와\n특별한 액티비티를 체험해보려고 한다\n이때 당신의 선택은?",
 "잠을 자기 위해 굴을 파야 하는 당신\n사막 여우가 굴 파는 방법을 알려주었다\n이때 당신의 다음 행동은?",
-"펭귄 마을에 도착한 코알라\n새로운 동물을 본 펭귄들이 당신을\n반겨주며 같이 놀자고 한다\n당신은 무엇을 하고 싶은가?",
+"펭귄 마을에 도착한 당신!\n펭귄들이 반겨주며 같이 놀자고 한다\n당신은 무엇을 하고 싶은가?",
 "어느새 저녁이 되었다\n펭귄들이 재밌었다며 더 놀자고\n제안하는데 이때 당신의 반응은?"];
 var answers1 = ["동물들이 어떤 길로 많이 갔는지\n그 흔적들을 찾아본다",
 "그래! 나도 같이 탈래!", "재미 없지만 코알라 마을에 가서\n돈을 벌 수 있는 기술",
@@ -71,7 +71,6 @@ class QuizCard extends React.Component {
         answer1: answers1[0],
         answer2: answers2[0],
         answer3_visibility: "collapse",
-        answers_height: "11%",
         progress_image: progress_images[0],
         button_color: button_colors[0],
         answers: [],
@@ -117,7 +116,7 @@ class QuizCard extends React.Component {
     render() {
         const { location } = this.props;
         const { name, sex } = (location.state === undefined)? { name: "", sex: "" } : location.state;
-        let { bg_gradation, bg_top_image, bg_bottom_image, image, text, answer1, answer2, answer3_visibility, answers_height,
+        let { bg_gradation, bg_top_image, bg_bottom_image, image, text, answer1, answer2, answer3_visibility,
             progress_image, button_color, answers } = this.state;
 
         if (location.state) {
@@ -134,15 +133,15 @@ class QuizCard extends React.Component {
                                 pathname: '/result',
                                 state: { name, sex, answers }
                         }} onClick={this.handleClick}
-                        style={ {backgroundColor: button_color, height: answers_height} }><div id="1">{ answer1 }</div></Link>
+                        style={ {backgroundColor: button_color} }>{ answer1 }</Link>
                         <Link className="quiz__answer2" id="2" to={{
                                 pathname: '/result',
                                 state: { name, sex, answers }
                         }} onClick={this.handleClick}
-                        style={ {backgroundColor: button_color, height: answers_height} }><div id="2">{ answer2 }</div></Link>
+                        style={ {backgroundColor: button_color} }>{ answer2 }</Link>
                         <Link className="quiz__answer3" onClick={this.handleClick}
-                        style={ {backgroundColor: button_color, visibility: answer3_visibility, height: answers_height} }
-                        to="/"><div id="3">펭귄어 배우기</div></Link>
+                        style={ {backgroundColor: button_color, visibility: answer3_visibility} }
+                        to="/">펭귄어 배우기</Link>
                     </div>
                     <img className="quiz__progress" alt="quiz_progress" src={progress_image}/>
                 </div>
