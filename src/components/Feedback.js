@@ -30,12 +30,12 @@ function FeedBack({ userId }) {
     }
 
     useEffect(() => {
-        async function postScore() {
-            await axios.post("/api/users/feedback", {userId: userId, feedback:{score:Score}})
+        async function postFeedback() {
+            await axios.post("/api/users/feedback", {userId: userId, feedback:{score:Score, text:FeedbackText}})
             .then(res => console.log(res));
         }
-        postScore();
-    }, [userId, Score])
+        postFeedback();
+    }, [userId, Score, FeedbackText])
 
     const handleChangeText = e => setText(e.target.value)
 
@@ -57,14 +57,6 @@ function FeedBack({ userId }) {
         }
     }
 
-    useEffect(() => {
-        async function postText() {
-            await axios.post("/api/users/feedback", {userId: userId, feedback:{text:FeedbackText}})
-            .then(res => console.log(res));
-        }
-        postText();
-    }, [userId, FeedbackText])
-
     const notify = () => toast("클립보드에 복사되었습니다", {
         autoClose: 2000
     });
@@ -76,7 +68,7 @@ function FeedBack({ userId }) {
                     <img alt="coala_profile" src={coala_profile} className="coala__profile"/>
                 </a>
                 <a id="text" href="https://www.instagram.com/c0ala_official/" target="_blank" rel="noreferrer">c0ala_official</a>
-                <CopyToClipboard text={"http://localhost:3000/CoalaMVP#/result/" + userId}
+                <CopyToClipboard text={"http://ec2-3-34-152-127.ap-northeast-2.compute.amazonaws.com:3000/CoalaMVP#/result/" + userId}
                     onCopy={notify}>
                     <img alt="paper_plane" src={paper_plane} className="paper__plane"/>
                 </CopyToClipboard>
