@@ -6,6 +6,9 @@
     height: 100vh;
     z-index: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .result .result__bg {
     position: absolute;
@@ -24,7 +27,11 @@
     font-size: 1.8rem;
     font-weight: 500;
     text-align: center;
-    margin-top:16%;
+    margin-top: 30%;
+    margin-left: 3%;
+}
+.result__text p {
+    margin: 0;
 }
 .result .result__progress {
     position: fixed;
@@ -41,7 +48,7 @@
     background-color: white;
     display: flex;
     width: 100%;
-    height: 74px;
+    height: 6rem;
     box-shadow: 0 2px 6px -3px rgba(128, 88, 82, 0.8);
     align-items: center;
     justify-content: center;
@@ -86,6 +93,9 @@
     font-weight: 500;
 }
 @media screen and (min-width: 500px) {
+    .result .result__text {
+        margin-top:10%;
+    }
     .result .result__progress {
         width: 500px;
     }

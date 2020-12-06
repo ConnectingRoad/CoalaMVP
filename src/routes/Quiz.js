@@ -7,7 +7,7 @@ import village_top from '../img/village_top.png';
 import bar_1 from '../img/bar_1.svg';
 import sea_bottom from '../img/sea_bottom.svg';
 import sea_top from '../img/sea_top.png';
-import sea_surfing from '../img/sea_surfing.png';
+import sea_surfing from '../img/sea_surfing.svg';
 import bar_2 from '../img/bar_2.svg';
 import sea_turtle from '../img/sea_turtle.svg';
 import bar_3 from '../img/bar_3.svg';
@@ -25,7 +25,7 @@ import polar_juggling from '../img/polar_juggling.svg';
 import bar_7 from '../img/bar_7.svg';
 import polar_bottom from '../img/polar_bottom.svg';
 import polar_top from '../img/polar_top.png';
-import polar_clock from '../img/polar_clock.png';
+import polar_clock from '../img/polar_clock.svg';
 import bar_8 from '../img/bar_8.svg';
 
 var bg_gradations = ["linear-gradient(to bottom, #D88089CC, #FFC586CC)", 

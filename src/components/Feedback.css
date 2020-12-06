@@ -2,7 +2,7 @@
     margin: 24px 16px;
     background: #ffffffCC;
     height: auto;
-    border-radius: 38px;
+    border-radius: 30px;
     padding-bottom: 0.1px;
 }
 .feedback .feedback__header {
@@ -10,19 +10,20 @@
     align-items: center;
     background: white;
     width: 100%;
-    height: 73px;
-    border-radius: 38px 38px 0 0;
+    height: 7rem;
+    border-radius: 30px 30px 0 0;
     box-shadow: 0 2px 6px -3px rgba(128, 88, 82, 0.8);
 }
 .feedback__header a#img {
-    width: 12%;
-    margin-left: 8%;
+    width: 11%;
+    margin-left: 6%;
+    margin-top: 3px;
 }
 .feedback__header a#img:active {
     -webkit-tap-highlight-color: transparent;
 }
 .feedback__header .coala__profile {
-    width: 100%;
+    width: 90%;
     margin: 1px;
 }
 .feedback__header a#text {
@@ -32,10 +33,11 @@
     flex-grow: 0.8;
     text-decoration: none;
     -webkit-tap-highlight-color : transparent;
-    margin-left: 3%;
+    margin-left: 2%;
 }
 .feedback__header .paper__plane {
-    width: 8%;
+    width: 7%;
+    margin-left: 5rem;
 }
 .feedback__header .paper__plane:hover {
     cursor: pointer;
@@ -49,20 +51,20 @@
     color: #1e1e1e;
     font-size: 1.6rem;
     font-weight: 500;
-    border-radius: 24px;
+    border-radius: 22px;
 }
 .feedback .chat__insta{
     width: 70%;
-    margin-top: 30px;
-    margin-left: 15%;
+    margin-top: 20px;
+    margin-left: 13%;
 }
 .chat__insta p {
-    margin: 14px 10px;
+    margin: 10px;
 }
 .feedback .chat__plane {
     width: fit-content;
     margin-top: 10px;
-    margin-left: 15%;
+    margin-left: 13%;
     align-items: center;
 }
 .chat__plane img {
@@ -81,7 +83,7 @@
     display: flex;
 }
 .chat__container__star .chat__star {
-    width: 70%;
+    width: 60%;
     margin-top: 10px;
     margin-left: 2%;
     display: flex;
@@ -90,8 +92,8 @@
     align-items: center;
 }
 .chat__container img {
-    width: 10%;
-    margin-left: 3%;
+    width: 9%;
+    margin-left: 2%;
     align-self: flex-end;
 }
 .chat__star p {
@@ -117,8 +119,8 @@
     display: none;
 }
 .review__stars label {
-    width: 36px;
-    height: 34px;
+    width: 3.6rem;
+    height: 3.4rem;
 }
 .chat__container .chat__score {
     display: flex;
@@ -158,7 +160,7 @@
     background: transparent;
     resize: none;
     font-size: 14pt;
-    width: 70%;
+    width: 73%;
     margin-left: 5%;
     font-family: "Noto Sans KR", sans-serif;
     overflow: hidden;

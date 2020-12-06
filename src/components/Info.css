@@ -14,7 +14,7 @@
 }
 .info .info__text {
     position: absolute;
-    top: 40%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
@@ -24,7 +24,7 @@
 }
 .info .info__name {
     position: absolute;
-    top: 51%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
@@ -54,6 +54,9 @@
     text-align: center;
     box-shadow: 0px 3px 10px 0 rgba(128, 88, 82, 0.4);
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .info .info__male:active, .info__female:active {
@@ -64,21 +67,14 @@
 
 .info .info__male {
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 28%;
     transform: translate(-50%, -50%);
 }
 
 .info .info__female {
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 72%;
-    transform: translate(-50%, -50%);
-}
-
-.info__male p, .info__female p {
-    position: absolute;
-    top: 7%;
-    left: 50%;
     transform: translate(-50%, -50%);
 }

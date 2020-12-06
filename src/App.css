@@ -10,13 +10,13 @@ body {
     max-width: 500px;
     font-family: "Noto Sans KR", sans-serif;
 }
-@media screen and (min-width: 320px) and (max-width: 599px) {
+@media screen and (min-width: 321px) and (max-width: 499px) {
      html { 
          font-size: 58%; 
     } 
 }
 @media screen and (max-width: 320px) {
     html { 
-        font-size: 43%; 
+        font-size: 50%; 
    } 
 }

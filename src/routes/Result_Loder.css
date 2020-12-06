@@ -1,9 +1,8 @@
 .DNA_cont {
     position: relative;
-    margin-top: 7%;
-    margin-left: 7%;
-    -webkit-transform: scale(0.34);
-            transform: scale(0.34);
+    margin-top: 10%;
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
   }
   .nucleobase {
     display: inline-block;
@@ -361,5 +360,13 @@
               transform: translateY(0em);
     }
   }
-   
+
+@media screen and (min-width: 500px) {
+  .DNA_cont {
+    position: relative;
+    margin-top: 8%;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+}
   

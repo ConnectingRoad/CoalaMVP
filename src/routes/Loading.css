@@ -39,25 +39,17 @@
     outline: none;
     -webkit-tap-highlight-color : transparent;
 }
-@media screen and (min-height: 700px) {
+@media screen and (max-width: 500px) {
+    .loading .loading__text {
+        margin-top: 20%;
+    }
     .loading .loading__img {
-        bottom: 15%;
+        bottom: 20%;
     }
     .loading .loading__img:active {
-        bottom: 16%;
+        bottom: 21%;
     }
     .loading .loading__img:hover {
-        bottom: 16%;
-    } 
-}
-@media screen and (min-height: 800px) {
-    .loading .loading__img {
-        bottom: 25%;
-    }
-    .loading .loading__img:active {
-        bottom: 26%;
-    }
-    .loading .loading__img:hover {
-        bottom: 26%;
+        bottom: 21%;
     } 
 }
