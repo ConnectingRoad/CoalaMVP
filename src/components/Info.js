@@ -32,20 +32,23 @@ class Info extends React.Component {
 
         return (
             <div className="info">
-                <img className="info__bg" alt="naming_bg" src={ naming_bg }/>
-                <img className="info__img" alt="naming_img" src={ naming_img }/>
-                <div className="info__text">당신의 코알라에게 이름을 지어주세요</div>
-                <input className="info__name" onChange={this.handleChange} 
-                    style={ {border: this.state.border} } placeholder={this.state.placeholder}
-                    maxLength="10"/>
-                <Link className="info__male" to={{
-                    pathname: '/loading',
-                    state: { name, sex: "남" }
-                }} onClick={this.handleClick}><p>남자</p></Link>
-                <Link className="info__female" to={{
-                    pathname: '/loading',
-                    state: { name, sex: "여" }
-                }} onClick={this.handleClick}><p>여자</p></Link>
+                <div className="info__card">
+                    <img className="info__img" alt="naming_img" src={ naming_img }/>
+                    <div className="info__text">당신의 코알라에게 이름을 지어주세요</div>
+                    <input className="info__name" onChange={this.handleChange} 
+                        style={ {border: this.state.border} } placeholder={this.state.placeholder}
+                        maxLength="10"/>
+                    <div className="sex">  
+                        <Link className="info__male" to={{
+                            pathname: '/loading',
+                            state: { name, sex: "남" }
+                        }} onClick={this.handleClick}><p>남자</p></Link>
+                        <Link className="info__female" to={{
+                            pathname: '/loading',
+                            state: { name, sex: "여" }
+                        }} onClick={this.handleClick}><p>여자</p></Link>
+                    </div>  
+                </div>
             </div>
         );
     }

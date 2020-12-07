@@ -162,7 +162,7 @@
     font-size: 14pt;
     width: 73%;
     margin-left: 5%;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: '777Balsamtint', "Noto Sans KR", sans-serif;
     overflow: hidden;
 }
 .feedback__input .input__text:focus {
