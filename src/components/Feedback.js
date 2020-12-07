@@ -39,10 +39,10 @@ function FeedBack({ userId }) {
     }, [userId, Score, FeedbackText])
 
     const handleChangeText = e => {
-        if (e.target.value.length <= 50) {
+        if (e.target.value.length <= 100) {
             setText(e.target.value)
         } else {
-            alert("최대 50자까지 작성 가능합니다")
+            alert("최대 100자까지 작성 가능합니다")
         }
     }
 

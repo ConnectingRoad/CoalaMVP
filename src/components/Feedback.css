@@ -120,8 +120,8 @@
     display: none;
 }
 .review__stars label {
-    width: 3.6rem;
-    height: 3.4rem;
+    width: 3.0rem;
+    height: 2.8rem;
 }
 .chat__container .chat__score {
     display: flex;
@@ -194,10 +194,10 @@
     border: none;
     border-radius: 38px;
     width: fit-content;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #4e6edc;
     font-weight: 600;
-    margin: 3% 2%;
+    margin: 3% 0 3% 4%;
     padding: 0;
 }
 .feedback__input button:active {
