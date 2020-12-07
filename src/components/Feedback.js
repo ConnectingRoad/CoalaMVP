@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Feedback.css'
 import coala_profile from '../img/coala_profile.svg';
 import coala_profile_s from '../img/coala_profile_s.svg';
-import paper_plane from '../img/paper_plane.svg';
+import paper_plane from '../img/insta_share.svg';
 import TextareaAutosize from 'react-textarea-autosize';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';

@@ -146,6 +146,7 @@ class Result extends React.Component {
                                     <p id="subtitle">취향저격에는 하트 꾹</p>
                                 </div>
                                 <div className="result__classes">
+                                    <img alt="scroll" src={replay}/>
                                     {mbti.classes.map((c, index) => (
                                         <OpengraphReactComponent
                                             key={index}
