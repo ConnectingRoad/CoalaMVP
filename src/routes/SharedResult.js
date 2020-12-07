@@ -4,6 +4,10 @@ import './SharedResult.css';
 import ResultCard from '../components/ResultCard';
 import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
+import OpengraphReactComponent from 'opengraph-react';
+import ClassCardShared from '../components/ClassCard'
+
+const config = require('../config/key');
 
 class Result extends React.Component {
 
@@ -11,7 +15,8 @@ class Result extends React.Component {
         super(props);
         this.state = {
             mbti: {},
-            name: ""
+            name: "",
+            likes: []
         }
     }
 
@@ -21,10 +26,10 @@ class Result extends React.Component {
             .then(res => res.data);
         const user = data.user;
         
-        this.getMBTI(user.answers, user.name)
+        this.getMBTI(user.answers, user.name, user.sex, user.classes)
     }
 
-    getMBTI = async (answers, name) => {
+    getMBTI = async (answers, name, sex, likes) => {
         const data = await axios
             .get('/api/mbti/' + answers.join(''))
             .then(response => response.data);
@@ -32,7 +37,34 @@ class Result extends React.Component {
         
         mbti.description = mbti.description.replace(/\\n/g, '\n');
 
-        this.setState({mbti, name});
+        let newClasses = [];
+
+        if (sex === "여") newClasses.push(mbti.classes[7]);
+        else newClasses.push(mbti.classes[8]);
+
+        for (var i = 0; i < answers.length; i++) {
+            switch (i) {
+                case 1:
+                    if (answers[i] === 1) newClasses.push(mbti.classes[0]);
+                    else newClasses.push(mbti.classes[1]);
+                    break;
+                case 2:
+                    if (answers[i] === 1) newClasses.push(mbti.classes[2]);
+                    else newClasses.push(mbti.classes[3]);
+                    break;
+                case 6:
+                    if (answers[i] === 1) newClasses.push(mbti.classes[4]);
+                    else if (answers[i] === 2) newClasses.push(mbti.classes[5]);
+                    else newClasses.push(mbti.classes[6]);
+                    break;
+                default:
+                    break;
+            }
+        }
+        
+        mbti.classes = newClasses;
+
+        this.setState({mbti, name, likes});
     }
 
     componentDidMount() {
@@ -42,11 +74,11 @@ class Result extends React.Component {
     }
 
     render() {
-        const { mbti, name } = this.state;
+        const { mbti, name, likes } = this.state;
 
         return (
             <section className="container">
-                <div className="result__finish">
+                <div className="result__shared">
                     <header className="result__header">
                         <img alt="title" src={coalagram}/>
                     </header>
@@ -56,6 +88,26 @@ class Result extends React.Component {
                         userName={name}
                         coalaName={mbti.name}
                         description={mbti.description}/>
+                    <div className="classes_title">
+                        <p id="title">당신이 좋아할만한 클래스 추천!</p>
+                        <p id="subtitle">취향저격에는 하트 꾹</p>
+                    </div>
+                    <div className="result__classes">
+                        {mbti.classes.map((c, index) => (
+                            <OpengraphReactComponent
+                                key={index}
+                                site={c.url}
+                                appId={config.opengraphApiKey}
+                                onlyFetch={true}
+                            >
+                                <ClassCardShared 
+                                    key={index}
+                                    index={index}
+                                    url={c.url}
+                                    like={likes.index.like}/>
+                            </OpengraphReactComponent> 
+                        ))}
+                    </div>
                     <div className="result__replay" onClick={e => this.props.history.push('/')}>
                         <span>테스트 하기</span>
                         <img alt="replay" src={replay}/>
