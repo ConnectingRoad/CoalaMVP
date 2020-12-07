@@ -40,3 +40,6 @@
     border-radius: 0 0 38px 38px;
     line-height: 2.1rem;
 }
+.card__description span{
+    color: #4e6edc;
+}
