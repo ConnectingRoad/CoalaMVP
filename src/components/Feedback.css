@@ -46,7 +46,8 @@
     -webkit-tap-highlight-color: transparent;
 }
 .feedback #chat {
-    background: #e7e7e7;
+    background: #ffffffCC;
+    border: 1px solid #d4d4d4;
     display: flex;
     color: #1e1e1e;
     font-size: 1.6rem;
@@ -132,6 +133,26 @@
 }
 .no__score p {
     margin: 14px 10px;
+}
+.chat__container .chat__success__me {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.chat__success__me .feedback__success__me{
+    max-width: 70%;
+    margin-top: 10px;
+    margin-right: 11px;
+    display: flex;
+    background: #e7e7e7;
+    color: #1e1e1e;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 22px;
+}
+.feedback__success__me p {
+    margin: 14px 10px;
+    white-space: pre-line;
 }
 .chat__container .chat__success {
     display: flex;
