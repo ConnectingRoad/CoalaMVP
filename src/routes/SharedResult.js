@@ -5,11 +5,11 @@ import ResultCard from '../components/ResultCard';
 import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
 import OpengraphReactComponent from 'opengraph-react';
-import ClassCardShared from '../components/ClassCard'
+import ClassCardShared from '../components/ClassCardShared'
 
 const config = require('../config/key');
 
-class Result extends React.Component {
+class SharedResult extends React.Component {
 
     constructor(props) {
         super(props);
@@ -24,8 +24,12 @@ class Result extends React.Component {
         const data = await axios
             .get('/api/users/' + id)
             .then(res => res.data);
-        const user = data.user;
+        let user = data.user;
         
+        if (user.classes.length === 0) {
+            user.classes = [{index: 0, like:false}, {index: 0, like:false}, {index: 0, like:false}, {index: 0, like:false}];
+        }
+
         this.getMBTI(user.answers, user.name, user.sex, user.classes)
     }
 
@@ -93,7 +97,7 @@ class Result extends React.Component {
                         <p id="subtitle">취향저격에는 하트 꾹</p>
                     </div>
                     <div className="result__classes">
-                        {mbti.classes.map((c, index) => (
+                        {mbti.classes? (mbti.classes.map((c, index) => (
                             <OpengraphReactComponent
                                 key={index}
                                 site={c.url}
@@ -104,9 +108,9 @@ class Result extends React.Component {
                                     key={index}
                                     index={index}
                                     url={c.url}
-                                    like={likes.index.like}/>
+                                    like={likes[index].like}/>
                             </OpengraphReactComponent> 
-                        ))}
+                        ))): null}
                     </div>
                     <div className="result__replay" onClick={e => this.props.history.push('/')}>
                         <span>테스트 하기</span>
@@ -118,4 +122,4 @@ class Result extends React.Component {
     }
 }
 
-export default Result;
+export default SharedResult;

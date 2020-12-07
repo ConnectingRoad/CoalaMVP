@@ -3,7 +3,7 @@ import './ClassCardShared.css';
 import heart_on from '../img/heart_on.svg';
 import heart_off from '../img/heart_off.svg';
 
-function ClassCard(props) {
+function ClassCardShared(props) {
     const { title, image } = props.ogResults.openGraph;
 
     return (
@@ -17,4 +17,4 @@ function ClassCard(props) {
     )
 }
 
-export default ClassCard
+export default ClassCardShared
