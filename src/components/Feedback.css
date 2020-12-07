@@ -46,7 +46,8 @@
     -webkit-tap-highlight-color: transparent;
 }
 .feedback #chat {
-    background: #e7e7e7;
+    background: #ffffffCC;
+    border: 1px solid #d4d4d4;
     display: flex;
     color: #1e1e1e;
     font-size: 1.6rem;
@@ -119,8 +120,8 @@
     display: none;
 }
 .review__stars label {
-    width: 3.6rem;
-    height: 3.4rem;
+    width: 3.0rem;
+    height: 2.8rem;
 }
 .chat__container .chat__score {
     display: flex;
@@ -132,6 +133,26 @@
 }
 .no__score p {
     margin: 14px 10px;
+}
+.chat__container .chat__success__me {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.chat__success__me .feedback__success__me{
+    max-width: 70%;
+    margin-top: 10px;
+    margin-right: 11px;
+    display: flex;
+    background: #e7e7e7;
+    color: #1e1e1e;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 22px;
+}
+.feedback__success__me p {
+    margin: 14px 10px;
+    white-space: pre-wrap;
 }
 .chat__container .chat__success {
     display: flex;
@@ -173,10 +194,10 @@
     border: none;
     border-radius: 38px;
     width: fit-content;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #4e6edc;
     font-weight: 600;
-    margin: 3% 2%;
+    margin: 3% 0 3% 4%;
     padding: 0;
 }
 .feedback__input button:active {

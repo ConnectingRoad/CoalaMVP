@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Feedback.css'
 import coala_profile from '../img/coala_profile.svg';
 import coala_profile_s from '../img/coala_profile_s.svg';
-import paper_plane from '../img/paper_plane.svg';
+import paper_plane from '../img/insta_share.svg';
 import TextareaAutosize from 'react-textarea-autosize';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
@@ -14,8 +14,9 @@ function FeedBack({ userId }) {
     const [Score, setScore] = useState(0)
     const [Text, setText] = useState("")
     const [FeedbackText, setFeedbackText] = useState("")
-    const [Display, setDisplay] = useState(["none", "none"])
+    const [Display, setDisplay] = useState(["none", "none", "none"])
     const [Visibility, setVisibility] = useState(["visible", "hidden"])
+    const textRef = React.createRef();
 
     const handleChangeStar = e => {
         let checks = [false, false, false, false, false];
@@ -37,23 +38,34 @@ function FeedBack({ userId }) {
         postFeedback();
     }, [userId, Score, FeedbackText])
 
-    const handleChangeText = e => setText(e.target.value)
+    const handleChangeText = e => {
+        if (e.target.value.length <= 100) {
+            setText(e.target.value)
+        } else {
+            alert("최대 100자까지 작성 가능합니다")
+        }
+    }
 
     const handleSubmit = e => {
         if (Text === "") {
-            setDisplay(["flex", "none"]);
+            setDisplay(["flex", "none", "none"]);
             setVisibility(["hidden", "visible"]);
         } else {
             setFeedbackText(Text);
 
             let newDisplay = Display;
             newDisplay[1] = "flex";
+            newDisplay[2] = "flex";
             setDisplay(newDisplay);
 
-            setVisibility(["hidden", "hidden"])
+            setVisibility(["hidden", "hidden"]);
+
+            setText("");
 
             e.target.disabled = true;
-            e.target.style.color = "gray"
+            e.target.style.color = "gray";
+            textRef.current.disabled = true;
+            textRef.current.placeholder = "(☞ﾟヮﾟ)☞ Thank you❤"
         }
     }
 
@@ -79,7 +91,7 @@ function FeedBack({ userId }) {
             </div>
             <div className="chat__plane" id="chat">
                 <img alt="paper_plane" src={paper_plane} />
-                <p>을 눌러 결과를 공유해 보세요🙂 </p>
+                <p>을 눌러 결과를 공유해 보세요🙂</p>
             </div>
             <div className="chat__container">
                 <div className="chat__container__star">
@@ -101,14 +113,17 @@ function FeedBack({ userId }) {
                     <img alt="coala_profile" src={coala_profile_s} id="profile2" style={{visibility: Visibility[1]}}/>
                     <div className="no__score" id="chat"><p>내용을 입력해주세요!🙂</p></div>                                                                     
                 </div>
-                <div className="chat__success" style={{display: Display[1]}}>
+                <div className="chat__success__me" style={{display: Display[1]}}>
+                    <div className="feedback__success__me"><p>{FeedbackText}</p></div>                                                                     
+                </div>
+                <div className="chat__success" style={{display: Display[2]}}>
                     <img alt="coala_profile" src={coala_profile_s} id="profile3"/>
                     <div className="feedback__success" id="chat"><p>소중한 의견 감사합니다!</p></div>                                                                     
                 </div>
             </div>
             <div className="feedback__input">
                 <TextareaAutosize className="input__text" minRows="1" maxRows="3"
-                    placeholder="평을 남겨주세요..." value={Text} onChange={handleChangeText}/>
+                    placeholder="평을 남겨주세요..." value={Text} onChange={handleChangeText} ref={textRef}/>
                 <button type="submit" onClick={handleSubmit}>보내기</button>
             </div>
         </div>
