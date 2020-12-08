@@ -30,7 +30,7 @@ class Loading extends React.Component{
         } else{
             const name = location.state.name;
         
-            if (this.checkBatchimEnding(name)) this.setState({postposition:"은"});
+            if (this.checkBatchimEnding(name)) this.setState({postposition:"이는"});
         }
     }
 

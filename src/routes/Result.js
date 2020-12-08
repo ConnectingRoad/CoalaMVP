@@ -10,6 +10,7 @@ import ClassCard from '../components/ClassCard';
 import Feedback from '../components/Feedback';
 import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
+import HorizontalScroll from 'react-scroll-horizontal';
 
 class Result extends React.Component {
 
@@ -142,15 +143,20 @@ class Result extends React.Component {
                                     <p id="title">당신이 좋아할만한 클래스 추천!</p>
                                     <p id="subtitle">취향저격에는 하트 꾹</p>
                                 </div>
-                                <div className="result__classes">
+                                <HorizontalScroll 
+                                    className="result__classes"
+                                    reverseScroll={true}
+                                    style={{ width: "auto", height: "288px", margin: "20px 0 16px 20px"}}>
                                     {mbti.classes.map((c, index) => (
                                         <ClassCard 
                                             key={index}
                                             index={index}
                                             url={c.url}
+                                            title={c.title}
+                                            image={c.image}
                                             onChange={this.onHeartChanged}/>
                                     ))}
-                                </div>
+                                </HorizontalScroll>
                                 <Feedback 
                                     key={userId}
                                     userId={userId}/>
