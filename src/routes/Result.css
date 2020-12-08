@@ -71,6 +71,13 @@
     color: #767676;
     margin-top: 0;
 }
+.result__finish .result__classes {
+    display: flex;
+    height: auto;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-left: 45px;
+}
 .result__classes::-webkit-scrollbar {
     height: 0;
 }

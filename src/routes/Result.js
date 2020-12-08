@@ -143,10 +143,7 @@ class Result extends React.Component {
                                     <p id="title">당신이 좋아할만한 클래스 추천!</p>
                                     <p id="subtitle">취향저격에는 하트 꾹</p>
                                 </div>
-                                <HorizontalScroll 
-                                    className="result__classes"
-                                    reverseScroll={true}
-                                    style={{ width: "auto", height: "288px", margin: "20px 0 16px 20px"}}>
+                                <div className="result__classes">
                                     {mbti.classes.map((c, index) => (
                                         <ClassCard 
                                             key={index}
@@ -156,7 +153,7 @@ class Result extends React.Component {
                                             image={c.image}
                                             onChange={this.onHeartChanged}/>
                                     ))}
-                                </HorizontalScroll>
+                                </div>
                                 <Feedback 
                                     key={userId}
                                     userId={userId}/>

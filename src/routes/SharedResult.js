@@ -5,7 +5,6 @@ import ResultCard from '../components/ResultCard';
 import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
 import ClassCardShared from '../components/ClassCardShared'
-import HorizontalScroll from 'react-scroll-horizontal';
 
 class SharedResult extends React.Component {
 
@@ -94,10 +93,7 @@ class SharedResult extends React.Component {
                         <p id="title">당신이 좋아할만한 클래스 추천!</p>
                         <p id="subtitle">취향저격에는 하트 꾹</p>
                     </div>
-                    <HorizontalScroll 
-                                    className="result__classes"
-                                    reverseScroll={true}
-                                    style={{ width: "auto", height: "288px", margin: "20px 0 16px 20px"}}>
+                    <div className="result__classes">
                         {mbti.classes? (mbti.classes.map((c, index) => (
                             <ClassCardShared 
                                 key={index}
@@ -107,7 +103,7 @@ class SharedResult extends React.Component {
                                 image={c.image}
                                 like={likes[index].like}/>
                         ))): null}
-                    </HorizontalScroll>
+                    </div>
                     <div className="result__replay" onClick={e => this.props.history.push('/')}>
                         <span>테스트 하기</span>
                         <img alt="replay" src={replay}/>
