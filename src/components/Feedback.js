@@ -9,7 +9,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-axios.defaults.baseURL = 'http://ec2-3-34-212-61.ap-northeast-2.compute.amazonaws.com:8080'
+axios.defaults.baseURL = 'http://ec2-3-34-212-61.ap-northeast-2.compute.amazonaws.com'
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
