@@ -79,7 +79,7 @@ class SharedResult extends React.Component {
 
     render() {
         const { mbti, name, likes } = this.state;
-
+        
         return (
             <section className="container">
                 <div className="result__shared">
@@ -90,8 +90,8 @@ class SharedResult extends React.Component {
                         key={mbti._id}
                         index={mbti.index}
                         userName={name}
-                        coalaName={mbti.name}
-                        description={mbti.description}/>
+                        coalaName={mbti.name? mbti.name : ""}
+                        description={mbti.description? mbti.description : ""}/>
                     <div className="classes_title">
                         <p id="title">당신이 좋아할만한 클래스 추천!</p>
                         <p id="subtitle">취향저격에는 하트 꾹</p>
