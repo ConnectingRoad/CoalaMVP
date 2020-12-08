@@ -13,9 +13,6 @@ import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
 
 const config = require('../config/key');
-axios.defaults.baseURL = 'http://ec2-3-34-212-61.ap-northeast-2.compute.amazonaws.com'
-axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 class Result extends React.Component {
 
