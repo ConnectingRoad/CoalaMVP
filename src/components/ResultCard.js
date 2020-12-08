@@ -24,7 +24,7 @@ function ResultCard({ index, userName, coalaName, description }) {
                 <img alt="coala_img" src={images[index]}/>
             </div>
             <div className="card__description">
-                <p>{[description.substring(0, description.indexOf("#")), <span>#{coalaName}</span>,
+                <p>{[description.substring(0, description.indexOf("#")), <span key={1}>#{coalaName}</span>,
                         description.substring(description.indexOf("#") + coalaName.length + 1, description.length)]}</p>
             </div>
         </div>

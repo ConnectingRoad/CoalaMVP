@@ -8,6 +8,9 @@ import OpengraphReactComponent from 'opengraph-react';
 import ClassCardShared from '../components/ClassCardShared'
 
 const config = require('../config/key');
+axios.defaults.baseURL = 'http://ec2-3-34-212-61.ap-northeast-2.compute.amazonaws.com:8080'
+axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 class SharedResult extends React.Component {
 
