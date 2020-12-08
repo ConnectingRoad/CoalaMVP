@@ -7,12 +7,9 @@ import village_top from '../img/village_top.png';
 import bar_9 from '../img/bar_9.svg';
 import ResultCard from '../components/ResultCard';
 import ClassCard from '../components/ClassCard';
-import OpengraphReactComponent from 'opengraph-react';
 import Feedback from '../components/Feedback';
 import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
-
-const config = require('../config/key');
 
 class Result extends React.Component {
 
@@ -147,18 +144,11 @@ class Result extends React.Component {
                                 </div>
                                 <div className="result__classes">
                                     {mbti.classes.map((c, index) => (
-                                        <OpengraphReactComponent
+                                        <ClassCard 
                                             key={index}
-                                            site={c.url}
-                                            appId={config.opengraphApiKey}
-                                            onlyFetch={true}
-                                        >
-                                            <ClassCard 
-                                                key={index}
-                                                index={index}
-                                                url={c.url}
-                                                onChange={this.onHeartChanged}/>
-                                        </OpengraphReactComponent> 
+                                            index={index}
+                                            url={c.url}
+                                            onChange={this.onHeartChanged}/>
                                     ))}
                                 </div>
                                 <Feedback 

@@ -39,7 +39,7 @@ var bg_gradations = ["linear-gradient(to bottom, #D88089CC, #FFC586CC)",
 var bg_top_images = [village_top, sea_top, sea_top, desert_top, desert_top, desert_dark_top, polar_top, polar_top];
 var bg_bottom_images = [village_bottom, sea_bottom, sea_bottom, desert_bottom, desert_bottom, desert_dark_bottom, polar_bottom, polar_bottom];
 var images = [village_road, sea_surfing, sea_turtle, desert_tear, desert_activity, desert_sand, polar_juggling, polar_clock];
-var texts = ["두 갈래 길에 들어선 코알라\n이정표가 없다! 이때 당신의 선택은?",
+var texts = ["두 갈래 길에 들어선 코알라\n이정표가 없다!\n이때 당신의 선택은?",
 "바다에 도착했다\n함께 서핑하러 가자고 제안하는 거북이\n이때 당신의 반응은?",
 "거북이가 200년 산 경험을 살려 여러\n기술 중에 한 가지를 알려준다고 한다\n이때 당신의 선택은?",
 "사막에 도착한 코알라\n친구와 싸워 울고 있는 사막 여우가 있다\n이때 당신이 건넬 말은?",

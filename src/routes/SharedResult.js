@@ -4,10 +4,7 @@ import './SharedResult.css';
 import ResultCard from '../components/ResultCard';
 import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
-import OpengraphReactComponent from 'opengraph-react';
 import ClassCardShared from '../components/ClassCardShared'
-
-const config = require('../config/key');
 
 class SharedResult extends React.Component {
 
@@ -98,18 +95,11 @@ class SharedResult extends React.Component {
                     </div>
                     <div className="result__classes">
                         {mbti.classes? (mbti.classes.map((c, index) => (
-                            <OpengraphReactComponent
+                            <ClassCardShared 
                                 key={index}
-                                site={c.url}
-                                appId={config.opengraphApiKey}
-                                onlyFetch={true}
-                            >
-                                <ClassCardShared 
-                                    key={index}
-                                    index={index}
-                                    url={c.url}
-                                    like={likes[index].like}/>
-                            </OpengraphReactComponent> 
+                                index={index}
+                                url={c.url}
+                                like={likes[index].like}/>
                         ))): null}
                     </div>
                     <div className="result__replay" onClick={e => this.props.history.push('/')}>

@@ -51,6 +51,9 @@
     justify-content: center;
     align-items: center;
 }
+.loading .loading__startbtn:active {
+    -webkit-tap-highlight-color: transparent;
+}
 @media screen and (min-width: 600px) {
     .loading {
         padding: 10% 15% 0 15%;
