@@ -27,6 +27,7 @@ import polar_bottom from '../img/polar_bottom.svg';
 import polar_top from '../img/polar_top.png';
 import polar_clock from '../img/polar_clock.svg';
 import bar_8 from '../img/bar_8.svg';
+import arrow_back from '../img/arrow_back.svg'
 
 var bg_gradations = ["linear-gradient(to bottom, #D88089CC, #FFC586CC)", 
 "linear-gradient(to bottom, #3B5295CC, #B0D8D9CC)", 
@@ -60,7 +61,7 @@ var answers2 = ["'왠지 이쪽 길이 맞을 것 같아'\n감으로 찍어서 �
 var progress_images = [bar_1, bar_2, bar_3, bar_4, bar_5, bar_6, bar_7, bar_8];
 var button_colors = ["#E6596A", "#7388C2", "#7388C2", "#60A6AF", "#60A6AF", "#59375D", "#7A83E0", "#7A83E0"];
 
-class QuizCard extends React.Component {
+class Quiz extends React.Component {
     id = 0
     state = {
         bg_gradation: bg_gradations[0],
@@ -113,6 +114,36 @@ class QuizCard extends React.Component {
         }
     }
 
+    handleBack = e => {
+        const { history } = this.props;
+
+        if (this.id === 0) {
+            history.push('/start')
+        } else {
+            e.preventDefault();
+            
+            let newAnswers = this.state.answers;
+            newAnswers.pop();
+
+            this.id--;
+
+            this.setState({
+                bg_gradation: bg_gradations[this.id],
+                bg_top_image: bg_top_images[this.id],
+                bg_bottom_image: bg_bottom_images[this.id],
+                image: images[this.id],
+                text: texts[this.id],
+                answer1: answers1[this.id],
+                answer2: answers2[this.id],
+                answer3_visibility: this.id === 6? "visible" : "collapse",
+                progress_image: progress_images[this.id],
+                button_color: button_colors[this.id],
+                answers: newAnswers,
+            })
+        }
+        console.log(this.state.answers)
+    }
+
     render() {
         const { location } = this.props;
         const { name, sex } = (location.state === undefined)? { name: "", sex: "" } : location.state;
@@ -124,6 +155,7 @@ class QuizCard extends React.Component {
                 <div className="quiz" style={ {background: bg_gradation} }>
                     <img className="quiz__bg" id="top" alt="quiz_bg_top" src={bg_top_image}/>
                     <img className="quiz__bg" id="bottom" alt="quiz_bg_bottom" src={bg_bottom_image}/>
+                    <img className="quiz__back" alt="quiz_back" src={arrow_back} onClick={this.handleBack} />
                     <div className="quiz__card">
                         <img className="quiz__img" alt="quiz_img" src={ image }/>
                         <div className="quiz__text">
@@ -152,4 +184,4 @@ class QuizCard extends React.Component {
     }
 }
 
-export default QuizCard;
+export default Quiz;
