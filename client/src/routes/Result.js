@@ -10,7 +10,6 @@ import ClassCard from '../components/ClassCard';
 import Feedback from '../components/Feedback';
 import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
-import HorizontalScroll from 'react-scroll-horizontal';
 
 class Result extends React.Component {
 
