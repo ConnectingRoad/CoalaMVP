@@ -32,8 +32,6 @@ class Result extends React.Component {
     }
 
     getMBTI = async (name, sex, answers) => {
-        console.log(process.env.REACT_APP_FACEBOOK_APP_KEY)
-        console.log(process.env.REACT_APP_KAKAO_JS_KEY)
         const data = await axios
             .post('/api/mbti/register', {
                 name: name,
@@ -174,8 +172,9 @@ class Result extends React.Component {
                                         jsKey={process.env.REACT_APP_KAKAO_JS_KEY}>
                                         <img alt="insta_share" src={kakaotalk} id="share"/>
                                     </KaKaoTalkButton>
-                                    <FacebookButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId} appId={process.env.REACT_APP_FACEBOOK_APP_KEY}>
-                                        <img alt="insta_share" src={facebook} id="share"/>
+                                    <FacebookButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId} appId={process.env.REACT_APP_FACEBOOK_APP_KEY}
+                                        message={mbti.description}>
+                                        <img alt="insta_share" src={facebook} id="share" />
                                     </FacebookButton>
                                     <NaverBlogButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId}>
                                         <img alt="insta_share" src={naverblog} id="share"/>
