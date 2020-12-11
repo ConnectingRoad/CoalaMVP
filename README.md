@@ -1,1 +1,1 @@
-# Coala MVP Web Client
+# Coala MVP Server

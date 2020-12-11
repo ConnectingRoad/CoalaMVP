@@ -3,7 +3,7 @@ module.exports = function(app) {
     app.use(
         '/api',
         createProxyMiddleware({
-            target: 'http://ec2-3-34-212-61.ap-northeast-2.compute.amazonaws.com:8080',
+            target: 'http://localhost:5000',
             changeOrigin: true,
         })
     );
