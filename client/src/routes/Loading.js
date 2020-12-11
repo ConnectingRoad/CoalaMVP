@@ -45,12 +45,12 @@ class Loading extends React.Component{
                         <div className="loading__card">
                             <div className="loading__text">
                                 <p>평화로운 코알라마을<br/>
-                                모든 코알라들은 여유롭게 자고 먹으며<br/> 
-                                루즈한 일상을 보내고 있다<br/><br/>  
+                                모든 코알라들은 여유롭게 먹고 자며<br/> 
+                                지루한 일상을 보내고 있다<br/><br/>  
                                 
                                 모두가 단조로운 생활을 할 때<br/>
                                 한 마리의 코알라 {name}{this.state.postposition}<br/> 
-                                '나는 좀 더 다른 삶을 살고 싶어!'라고<br/>
+                                '나는 멋진 삶을 살거야!'라고<br/>
                                 외치며 코알라 마을을 벗어나는데...<br/><br/>
 
                                 {"과연 " + name + this.state.postposition}<br/>
