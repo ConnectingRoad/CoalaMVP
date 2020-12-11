@@ -20,6 +20,11 @@ mongoose.connect(config.mongoURI, {
 }).then(() => console.log('MongoDB connect'))
 .catch(err => console.log(err));
 
+// 미들웨어 함수를 특정 경로에 등록
+app.use('/api/data', function(req, res) {
+    res.json({ greeting: 'Hello World' });
+});
+
 app.post('/api/mbti/register', (req, res) => {
     const userData = req.body;
     const user = new User(userData);
