@@ -168,19 +168,19 @@ class Result extends React.Component {
                                     key={userId}
                                     userId={userId}/>
                                 <div className="result__share">
-                                    <KaKaoTalkButton className="share__kakao" id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId}
+                                    <KaKaoTalkButton className="share__kakao" id="share__button" pathname={"https://coala-mvp.herokuapp.com/#/result/" + userId}
                                         jsKey={process.env.REACT_APP_KAKAO_JS_KEY}>
                                         <img alt="insta_share" src={kakaotalk} id="share"/>
                                     </KaKaoTalkButton>
-                                    <FacebookButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId} appId={process.env.REACT_APP_FACEBOOK_APP_KEY}
+                                    <FacebookButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/#/result/" + userId} appId={process.env.REACT_APP_FACEBOOK_APP_KEY}
                                         message={mbti.description}>
                                         <img alt="insta_share" src={facebook} id="share" />
                                     </FacebookButton>
-                                    <NaverBlogButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId}>
+                                    <NaverBlogButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/#/result/" + userId}>
                                         <img alt="insta_share" src={naverblog} id="share"/>
                                     </NaverBlogButton>
                                     <div id="share__button">
-                                        <CopyToClipboard text={"https://coala-mvp.herokuapp.com/result/" + userId}
+                                        <CopyToClipboard text={"https://coala-mvp.herokuapp.com/#/result/" + userId}
                                             onCopy={this.notify}>
                                             <img alt="insta_share" src={linkshare} id="share"/>
                                         </CopyToClipboard>
