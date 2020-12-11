@@ -7,6 +7,8 @@ import Result from './routes/Result';
 import Cover from './routes/Cover';
 import SharedResult from './routes/SharedResult';
 
+require('dotenv').config()
+
 function App() {
   return (
     <HashRouter>
