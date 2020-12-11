@@ -87,10 +87,10 @@
     margin-bottom: 21px;
 }
 .result__share #share__button {
-    width: 9%;
+    width: 11%;
     height: 100%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
 }
 .result__share #share__button:hover {
     cursor: pointer;

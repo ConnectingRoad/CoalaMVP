@@ -18,8 +18,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
 import { FacebookButton, NaverBlogButton, KaKaoTalkButton } from 'react-social-kr';
 
-const config = require('../config/key');
-
 class Result extends React.Component {
 
     constructor(props) {
@@ -34,8 +32,6 @@ class Result extends React.Component {
     }
 
     getMBTI = async (name, sex, answers) => {
-        console.log(config.kakaoJsKey)
-        console.log(config.facebookAppKey)
         const data = await axios
             .post('/api/mbti/register', {
                 name: name,
@@ -173,10 +169,10 @@ class Result extends React.Component {
                                     userId={userId}/>
                                 <div className="result__share">
                                     <KaKaoTalkButton className="share__kakao" id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId}
-                                        jsKey={config.kakaoJsKey}>
+                                        jsKey={process.env.REACT_APP_KAKAO_JS_KEY}>
                                         <img alt="insta_share" src={kakaotalk} id="share"/>
                                     </KaKaoTalkButton>
-                                    <FacebookButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId} appId={config.facebookAppKey}>
+                                    <FacebookButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId} appId={process.env.REACT_APP_FACEBOOK_APP_KEY}>
                                         <img alt="insta_share" src={facebook} id="share"/>
                                     </FacebookButton>
                                     <NaverBlogButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId}>
