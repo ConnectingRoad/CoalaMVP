@@ -80,7 +80,7 @@ function FeedBack({ userId }) {
                     <img alt="coala_profile" src={coala_profile} className="coala__profile"/>
                 </a>
                 <a id="text" href="https://www.instagram.com/c0ala_official/" target="_blank" rel="noreferrer">c0ala_official</a>
-                <CopyToClipboard text={"http://ec2-3-34-152-127.ap-northeast-2.compute.amazonaws.com:3000/CoalaMVP#/result/" + userId}
+                <CopyToClipboard text={"https://coala-mvp.herokuapp.com/#/result/" + userId}
                     onCopy={notify}>
                     <img alt="paper_plane" src={paper_plane} className="paper__plane"/>
                 </CopyToClipboard>
