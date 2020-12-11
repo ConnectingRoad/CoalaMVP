@@ -32,6 +32,8 @@ class Result extends React.Component {
     }
 
     getMBTI = async (name, sex, answers) => {
+        console.log(process.env.REACT_APP_FACEBOOK_APP_KEY)
+        console.log(process.env.REACT_APP_KAKAO_JS_KEY)
         const data = await axios
             .post('/api/mbti/register', {
                 name: name,
