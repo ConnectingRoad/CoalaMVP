@@ -35,16 +35,6 @@
     -webkit-tap-highlight-color : transparent;
     margin-left: 2%;
 }
-.feedback__header .paper__plane {
-    width: 7%;
-    margin-left: 5rem;
-}
-.feedback__header .paper__plane:hover {
-    cursor: pointer;
-}
-.feedback__header .paper__plane:hover:active {
-    -webkit-tap-highlight-color: transparent;
-}
 .feedback #chat {
     background: #ffffffCC;
     border: 1px solid #d4d4d4;
@@ -55,26 +45,29 @@
     border-radius: 22px;
 }
 .feedback .chat__insta{
-    width: 70%;
+    width: fit-content;
     margin-top: 20px;
     margin-left: 13%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
 }
 .chat__insta p {
     margin: 10px;
 }
-.feedback .chat__plane {
-    width: fit-content;
-    margin-top: 10px;
-    margin-left: 13%;
-    align-items: center;
-}
-.chat__plane img {
-    margin-left: 10px;
-    margin-right: 3px;
-    width: 15px;
-}
-.chat__plane p {
-    margin-right: 10px;
+.chat__insta a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #1e1e1e;
+    text-decoration: none;
+    -webkit-tap-highlight-color : transparent;
+    border: 1px solid #d4d4d4;
+    border-radius: 8px;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    background: #ebebeb77;
 }
 .feedback .chat__container {
     display: flex;

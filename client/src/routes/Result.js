@@ -10,6 +10,15 @@ import ClassCard from '../components/ClassCard';
 import Feedback from '../components/Feedback';
 import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
+import linkshare from '../img/linkshare.svg';
+import facebook from '../img/facebook.svg';
+import kakaotalk from '../img/kakaotalk.svg';
+import naverblog from '../img/naverblog.svg';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { ToastContainer, toast } from 'react-toastify';
+import { FacebookButton, NaverBlogButton, KaKaoTalkButton } from 'react-social-kr';
+
+const config = require('../config/key');
 
 class Result extends React.Component {
 
@@ -89,6 +98,10 @@ class Result extends React.Component {
         }
     }
 
+    notify = () => toast("클립보드에 복사되었습니다", {
+        autoClose: 2000
+    });
+
     render() {
         const { isLoading, mbti, userId } = this.state;
         const { location } = this.props;
@@ -156,6 +169,25 @@ class Result extends React.Component {
                                 <Feedback 
                                     key={userId}
                                     userId={userId}/>
+                                <div className="result__share">
+                                    <KaKaoTalkButton className="share__kakao" id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId}
+                                        jsKey={config.kakaoJsKey}>
+                                        <img alt="insta_share" src={kakaotalk} id="share"/>
+                                    </KaKaoTalkButton>
+                                    <FacebookButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId} appId={config.facebookAppKey}>
+                                        <img alt="insta_share" src={facebook} id="share"/>
+                                    </FacebookButton>
+                                    <NaverBlogButton id="share__button" pathname={"https://coala-mvp.herokuapp.com/result/" + userId}>
+                                        <img alt="insta_share" src={naverblog} id="share"/>
+                                    </NaverBlogButton>
+                                    <div id="share__button">
+                                        <CopyToClipboard text={"https://coala-mvp.herokuapp.com/result/" + userId}
+                                            onCopy={this.notify}>
+                                            <img alt="insta_share" src={linkshare} id="share"/>
+                                        </CopyToClipboard>
+                                        <ToastContainer/>
+                                    </div>
+                                </div>
                                 <div className="result__replay" onClick={e => this.props.history.push('/')}>
                                     <span>테스트 다시하기</span>
                                     <img alt="replay" src={replay}/>

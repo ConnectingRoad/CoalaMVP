@@ -1,3 +1,4 @@
 module.exports = {
-    opengraphApiKey: process.env.MONGO_URI
+    facebookAppKey: process.env.FACEBOOK_APP_KEY,
+    kakaoJsKey: process.env.KAKAO_JS_KEY
 }

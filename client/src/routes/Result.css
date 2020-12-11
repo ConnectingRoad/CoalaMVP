@@ -81,6 +81,26 @@
 .result__classes::-webkit-scrollbar {
     height: 0;
 }
+.result__finish .result__share {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 21px;
+}
+.result__share #share__button {
+    width: 9%;
+    height: 100%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+.result__share #share__button:hover {
+    cursor: pointer;
+}
+.result__share #share__button:hover:active {
+    -webkit-tap-highlight-color: transparent;
+}
+.result__share #share {
+    width: 100%;
+}
 .result__finish .result__replay {
     display: flex;
     width: fit-content;
@@ -99,5 +119,8 @@
     }
     .result .result__progress {
         width: 500px;
+    }
+    .result__share .share__kakao {
+        display: none;
     }
 }
