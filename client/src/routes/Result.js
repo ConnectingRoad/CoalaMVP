@@ -12,11 +12,21 @@ import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
 import linkshare from '../img/linkshare.svg';
 import facebook from '../img/facebook.svg';
-import kakaotalk from '../img/kakaotalk.svg';
 import naverblog from '../img/naverblog.svg';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
-import { FacebookButton, NaverBlogButton, KaKaoTalkButton } from 'react-social-kr';
+import { FacebookShareButton } from 'react-share';
+import KakaoShareButton from '../components/KakaoShareButton';
+import coala_1 from '../img/coala_1.svg';
+import coala_2 from '../img/coala_2.svg';
+import coala_3 from '../img/coala_3.svg';
+import coala_4 from '../img/coala_4.svg';
+import coala_5 from '../img/coala_5.svg';
+import coala_6 from '../img/coala_6.svg';
+import coala_7 from '../img/coala_7.svg';
+import coala_8 from '../img/coala_8.svg';
+
+const images = [coala_1, coala_2, coala_3, coala_4, coala_5, coala_6, coala_7, coala_8];
 
 class Result extends React.Component {
 
@@ -29,6 +39,8 @@ class Result extends React.Component {
             classes: [{title: "", like: false}, {title: "", like: false}, {title: "", like: false}, {title: "", like: false}]
         }
         this.onHeartChanged = this.onHeartChanged.bind(this)
+        this.ref = React.createRef();
+        this.script = document.createElement('script');
     }
 
     getMBTI = async (name, sex, answers) => {
@@ -93,7 +105,15 @@ class Result extends React.Component {
             history.push('/');
         } else {
             this.getMBTI(location.state.name, location.state.sex, location.state.answers);
+
+            this.script.src = 'https://developers.kakao.com/sdk/js/kakao.js';
+            this.script.async = true;
+            document.body.appendChild(this.script);
         }
+    }
+
+    componentWillUnmount() {
+        document.body.removeChild(this.script);
     }
 
     notify = () => toast("클립보드에 복사되었습니다", {
@@ -104,7 +124,7 @@ class Result extends React.Component {
         const { isLoading, mbti, userId } = this.state;
         const { location } = this.props;
         const { name } = (location.state === undefined)? { name: "" } : location.state;
-        console.log("https://coala-mvp.herokuapp.com/#/result/" + userId)
+        const shareUrl = "https://www.c0alatest.com//#/result/" + userId;
 
         return (
             <section className="container">
@@ -151,7 +171,7 @@ class Result extends React.Component {
                                     coalaName={mbti.name}
                                     description={mbti.description}/>
                                 <div className="classes_title">
-                                    <p id="title">당신이 좋아할만한 클래스 추천!</p>
+                                    <p id="title" onClick={e =>{console.log(this.ref.current)}}>당신이 좋아할만한 클래스 추천!</p>
                                     <p id="subtitle">취향저격에는 하트 꾹</p>
                                 </div>
                                 <div className="result__classes">
@@ -169,21 +189,18 @@ class Result extends React.Component {
                                     key={userId}
                                     userId={userId}/>
                                 <div className="result__share">
-                                    <KaKaoTalkButton className="share__kakao" id="share__button" pathname={"https://www.c0alatest.com//#/result/" + userId}
-                                        jsKey={process.env.REACT_APP_KAKAO_JS_KEY}>
-                                        <img alt="insta_share" src={kakaotalk} id="share"/>
-                                    </KaKaoTalkButton>
-                                    <FacebookButton id="share__button" pathname={"https://www.c0alatest.com//#/result/" + userId} appId={process.env.REACT_APP_FACEBOOK_APP_KEY}
-                                        message={mbti.description}>
-                                        <img alt="insta_share" src={facebook} id="share" />
-                                    </FacebookButton>
-                                    <NaverBlogButton id="share__button" pathname={"https://www.c0alatest.com/#/result/" + userId}>
-                                        <img alt="insta_share" src={naverblog} id="share"/>
-                                    </NaverBlogButton>
+                                    <KakaoShareButton id="share__button" title={mbti.name} description={mbti.description} image={images[mbti.index]} url={shareUrl}/>
+                                    <FacebookShareButton id="share__button" children={<img alt="facebook" src={facebook} id="share" />}
+                                        url={shareUrl}/>
+                                    <a id="share__button" 
+                                        href={"http://share.naver.com/web/shareView.nhn?url=" + encodeURIComponent(shareUrl)}
+                                        target="_blank" rel="noreferrer">
+                                        <img src={naverblog} alt="naverblog" id="share"/>
+                                    </a>
                                     <div id="share__button">
                                         <CopyToClipboard text={"https://www.c0alatest.com/#/result/" + userId}
                                             onCopy={this.notify}>
-                                            <img alt="insta_share" src={linkshare} id="share"/>
+                                            <img alt="linkshare" src={linkshare} id="share"/>
                                         </CopyToClipboard>
                                         <ToastContainer/>
                                     </div>

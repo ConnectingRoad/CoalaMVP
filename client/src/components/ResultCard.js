@@ -10,7 +10,6 @@ import coala_6 from '../img/coala_6.svg';
 import coala_7 from '../img/coala_7.svg';
 import coala_8 from '../img/coala_8.svg';
 
-
 function ResultCard({ index, userName, coalaName, description }) {
     const images = [coala_1, coala_2, coala_3, coala_4, coala_5, coala_6, coala_7, coala_8];
 

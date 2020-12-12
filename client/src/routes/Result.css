@@ -95,8 +95,11 @@
 .result__share #share__button:hover {
     cursor: pointer;
 }
-.result__share #share__button:hover:active {
+.result__share #share__button:active {
     -webkit-tap-highlight-color: transparent;
+}
+.result__share #share__button:focus {
+    outline: none;
 }
 .result__share #share {
     width: 100%;
@@ -120,7 +123,7 @@
     .result .result__progress {
         width: 500px;
     }
-    .result__share .share__kakao {
+    .result__share button:nth-child(1) {
         display: none;
     }
 }
