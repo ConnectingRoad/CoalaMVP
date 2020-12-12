@@ -39,6 +39,7 @@
     background-color: #ffffffCC;
     border-radius: 0 0 30px 30px;
     line-height: 2.1rem;
+    word-break: keep-all;
 }
 .card__description span{
     color: #4e6edc;

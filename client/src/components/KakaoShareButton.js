@@ -23,7 +23,7 @@ const KakaoShareButton = ({ title, description, image, url }) => {
         content: {
           title: title,
           description: description,
-          imageUrl: image, // i.e. process.env.FETCH_URL + '/logo.png'
+          imageUrl: kakaotalk, // i.e. process.env.FETCH_URL + '/logo.png'
           link: {
             mobileWebUrl: url,
             webUrl: url,

@@ -193,7 +193,7 @@ class Result extends React.Component {
                                     <FacebookShareButton id="share__button" children={<img alt="facebook" src={facebook} id="share" />}
                                         url={shareUrl}/>
                                     <a id="share__button" 
-                                        href={"http://share.naver.com/web/shareView.nhn?url=" + encodeURIComponent(shareUrl)}
+                                        href={"http://share.naver.com/web/shareView.nhn?url=" + encodeURIComponent(shareUrl) + "&title=" + mbti.name}
                                         target="_blank" rel="noreferrer">
                                         <img src={naverblog} alt="naverblog" id="share"/>
                                     </a>
