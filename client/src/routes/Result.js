@@ -16,6 +16,15 @@ import naverblog from '../img/naverblog.svg';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
 import { FacebookShareButton } from 'react-share';
+import KakaoShareButton from '../components/KakaoShareButton';
+import coala_1 from '../img/coala_1.svg';
+import coala_2 from '../img/coala_2.svg';
+import coala_3 from '../img/coala_3.svg';
+import coala_4 from '../img/coala_4.svg';
+import coala_5 from '../img/coala_5.svg';
+import coala_6 from '../img/coala_6.svg';
+import coala_7 from '../img/coala_7.svg';
+import coala_8 from '../img/coala_8.svg';
 
 class Result extends React.Component {
 
@@ -28,6 +37,7 @@ class Result extends React.Component {
             classes: [{title: "", like: false}, {title: "", like: false}, {title: "", like: false}, {title: "", like: false}]
         };
         this.onHeartChanged = this.onHeartChanged.bind(this);
+        this.images = [coala_1, coala_2, coala_3, coala_4, coala_5, coala_6, coala_7, coala_8];
     }
 
     getMBTI = async (name, sex, answers) => {
@@ -103,7 +113,7 @@ class Result extends React.Component {
         const { isLoading, mbti, userId } = this.state;
         const { location } = this.props;
         const { name } = (location.state === undefined)? { name: "" } : location.state;
-        const shareUrl = "http://c0alatest.com/#/result/" + userId;
+        const shareUrl = "https://c0alatest.com/#/result/" + userId;
 
         return (
             <section className="container">
@@ -145,7 +155,7 @@ class Result extends React.Component {
                                 </header>
                                 <ResultCard 
                                     key={mbti._id}
-                                    index={mbti.index}
+                                    image={this.images[mbti.index]}
                                     userName={name}
                                     coalaName={mbti.name}
                                     description={mbti.description}/>
@@ -168,6 +178,7 @@ class Result extends React.Component {
                                     key={userId}
                                     userId={userId}/>
                                 <div className="result__share">
+                                    <KakaoShareButton description={mbti.description} image={this.images[mbti.index]} url={shareUrl}/>
                                     <FacebookShareButton id="share__button" children={<img alt="facebook" src={facebook} id="share" />}
                                         url={shareUrl}/>
                                     <a id="share__button" 

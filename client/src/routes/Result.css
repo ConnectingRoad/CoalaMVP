@@ -123,4 +123,7 @@
     .result .result__progress {
         width: 500px;
     }
+    .result__share .share__kakao {
+        display: none;
+    }
 }
