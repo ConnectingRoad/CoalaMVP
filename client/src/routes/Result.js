@@ -16,17 +16,6 @@ import naverblog from '../img/naverblog.svg';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
 import { FacebookShareButton } from 'react-share';
-import KakaoShareButton from '../components/KakaoShareButton';
-import coala_1 from '../img/coala_1.svg';
-import coala_2 from '../img/coala_2.svg';
-import coala_3 from '../img/coala_3.svg';
-import coala_4 from '../img/coala_4.svg';
-import coala_5 from '../img/coala_5.svg';
-import coala_6 from '../img/coala_6.svg';
-import coala_7 from '../img/coala_7.svg';
-import coala_8 from '../img/coala_8.svg';
-
-const images = [coala_1, coala_2, coala_3, coala_4, coala_5, coala_6, coala_7, coala_8];
 
 class Result extends React.Component {
 
@@ -37,10 +26,8 @@ class Result extends React.Component {
             mbti: {},
             userId: {},
             classes: [{title: "", like: false}, {title: "", like: false}, {title: "", like: false}, {title: "", like: false}]
-        }
-        this.onHeartChanged = this.onHeartChanged.bind(this)
-        this.ref = React.createRef();
-        this.script = document.createElement('script');
+        };
+        this.onHeartChanged = this.onHeartChanged.bind(this);
     }
 
     getMBTI = async (name, sex, answers) => {
@@ -105,15 +92,7 @@ class Result extends React.Component {
             history.push('/');
         } else {
             this.getMBTI(location.state.name, location.state.sex, location.state.answers);
-
-            this.script.src = 'https://developers.kakao.com/sdk/js/kakao.js';
-            this.script.async = true;
-            document.body.appendChild(this.script);
         }
-    }
-
-    componentWillUnmount() {
-        document.body.removeChild(this.script);
     }
 
     notify = () => toast("클립보드에 복사되었습니다", {
@@ -124,7 +103,7 @@ class Result extends React.Component {
         const { isLoading, mbti, userId } = this.state;
         const { location } = this.props;
         const { name } = (location.state === undefined)? { name: "" } : location.state;
-        const shareUrl = "https://www.c0alatest.com//#/result/" + userId;
+        const shareUrl = "http://c0alatest.com/#/result/" + userId;
 
         return (
             <section className="container">
@@ -189,7 +168,6 @@ class Result extends React.Component {
                                     key={userId}
                                     userId={userId}/>
                                 <div className="result__share">
-                                    <KakaoShareButton id="share__button" title={mbti.name} description={mbti.description} image={images[mbti.index]} url={shareUrl}/>
                                     <FacebookShareButton id="share__button" children={<img alt="facebook" src={facebook} id="share" />}
                                         url={shareUrl}/>
                                     <a id="share__button" 
@@ -198,8 +176,7 @@ class Result extends React.Component {
                                         <img src={naverblog} alt="naverblog" id="share"/>
                                     </a>
                                     <div id="share__button">
-                                        <CopyToClipboard text={"https://www.c0alatest.com/#/result/" + userId}
-                                            onCopy={this.notify}>
+                                        <CopyToClipboard text={shareUrl} onCopy={this.notify}>
                                             <img alt="linkshare" src={linkshare} id="share"/>
                                         </CopyToClipboard>
                                         <ToastContainer/>

@@ -123,7 +123,4 @@
     .result .result__progress {
         width: 500px;
     }
-    .result__share button:nth-child(1) {
-        display: none;
-    }
 }

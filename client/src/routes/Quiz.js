@@ -51,13 +51,13 @@ var texts = ["두 갈래 길에 들어선 코알라\n이정표가 없다!\n이�
 var answers1 = ["동물들이 어떤 길로 많이 갔는지\n그 흔적들을 찾아본다",
 "그래! 나도 같이 할래!", "재미 없지만 코알라 마을에 가서\n돈을 벌 수 있는 기술",
 "무슨 일이야? 왜 싸웠는데?", "나만의 특별한 경험!\n사막 오지 탐험",
-"혹시 모르니 사막 여우가\n알려준 방법 그대로 굴을 판다", "썰매 타기",
+"혹시 모르니 사막 여우가\n알려준 방법 그대로 굴을 판다", "눈썰매 타기",
 "아 진짜 재밌었다! 그래 더 놀자!"];
 var answers2 = ["'왠지 이쪽 길이 맞을 것 같아'\n감으로 찍어서 간다",
 "아니야~ 난 앉아서 햇볕 쐬고 있을게\n조용히 선글라스를 낀다",
 "돈을 벌 수는 없지만\n흥미로운 기술", "헐ㅜㅜ 괜찮아? 너무 속상하겠다...",
 "여행의 하이라이트!\n 열기구 타기", "사막 여우의 방법에\n나만의 느낌을 추가해서 굴을 판다",
-"눈사람 만들기", "시간이 늦어서\n이제 좀 쉬러갈게, 안녕~"];
+"기념품 만들기", "시간이 늦어서\n이제 좀 쉬러갈게, 안녕~"];
 var progress_images = [bar_1, bar_2, bar_3, bar_4, bar_5, bar_6, bar_7, bar_8];
 var button_colors = ["#E6596A", "#7388C2", "#7388C2", "#60A6AF", "#60A6AF", "#59375D", "#7A83E0", "#7A83E0"];
 
@@ -173,7 +173,7 @@ class Quiz extends React.Component {
                         style={ {backgroundColor: button_color} }>{ answer2 }</Link>
                         <Link className="quiz__answer3" onClick={this.handleClick}
                         style={ {backgroundColor: button_color, visibility: answer3_visibility} }
-                        to="/">펭귄말 배우기</Link>
+                        to="/">얼음 체스 두기</Link>
                     </div>
                     <img className="quiz__progress" alt="quiz_progress" src={progress_image}/>
                 </div>
