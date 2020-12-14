@@ -5,14 +5,6 @@ import ResultCard from '../components/ResultCard';
 import replay from '../img/replay.svg';
 import coalagram from '../img/coalagram_title.png';
 import ClassCardShared from '../components/ClassCardShared'
-import coala_1 from '../img/coala_1.svg';
-import coala_2 from '../img/coala_2.svg';
-import coala_3 from '../img/coala_3.svg';
-import coala_4 from '../img/coala_4.svg';
-import coala_5 from '../img/coala_5.svg';
-import coala_6 from '../img/coala_6.svg';
-import coala_7 from '../img/coala_7.svg';
-import coala_8 from '../img/coala_8.svg';
 
 class SharedResult extends React.Component {
 
@@ -23,7 +15,6 @@ class SharedResult extends React.Component {
             name: "",
             likes: []
         }
-        this.images = [coala_1, coala_2, coala_3, coala_4, coala_5, coala_6, coala_7, coala_8];
     }
 
     getUser = async (id) => {
@@ -94,7 +85,7 @@ class SharedResult extends React.Component {
                     </header>
                     <ResultCard 
                         key={mbti._id}
-                        image={this.images[mbti.index]}
+                        index={mbti.index}
                         userName={name}
                         coalaName={mbti.name? mbti.name : ""}
                         description={mbti.description? mbti.description : ""}/>
