@@ -171,7 +171,7 @@ class Quiz extends React.Component {
                                 state: { name, sex, answers }
                         }} onClick={this.handleClick}
                         style={ {backgroundColor: button_color} }>{ answer2 }</Link>
-                        <Link className="quiz__answer3" onClick={this.handleClick}
+                        <Link className="quiz__answer3" id="3" onClick={this.handleClick}
                         style={ {backgroundColor: button_color, visibility: answer3_visibility} }
                         to="/">얼음 체스 두기</Link>
                     </div>
