@@ -8,8 +8,10 @@ const images = ['/img/coala_1.png', '/img/coala_2.png', '/img/coala_3.png', '/im
 function KakaoShareButton({ title, description, index, url }) {
 
   useEffect(() => {
-      window.Kakao.init(process.env.REACT_APP_KAKAO_JS_KEY);
-      window.Kakao.Link.createDefaultButton({
+      if (!window.Kakao.isInitialized()) window.Kakao.init(process.env.REACT_APP_KAKAO_JS_KEY);
+
+      if (window.Kakao.isInitialized()) {
+        window.Kakao.Link.createDefaultButton({
           container: '#share__button',
           objectType: 'feed',
           content: {
@@ -31,6 +33,7 @@ function KakaoShareButton({ title, description, index, url }) {
             },
           ]
         });
+      }
   }, [title, description, index, url])
   return (
       <div className="share__kakao" id="share__button">
